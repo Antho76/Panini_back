@@ -1,34 +1,22 @@
 # Panini_back
 
-API Spring Boot pour gérer une collection Panini Coupe du Monde 2026.
+Backend Spring Boot dockerisé pour la collection Panini.
 
-## Lancer en local
-
-```bash
-./mvnw spring-boot:run
-```
-
-Ou avec Maven installé :
+## Lancer en local avec Docker
 
 ```bash
-mvn spring-boot:run
+docker compose up --build
 ```
+
+API: `http://localhost:8080`
 
 ## Endpoints
 
+- `POST /api/auth/register`
+- `POST /api/auth/login`
+- `GET /api/me/dashboard`
+- `GET /api/me/collection`
+- `POST /api/me/collection`
 - `GET /api/stickers`
-- `GET /api/stickers?search=mbappe`
-- `GET /api/stickers?team=FRA`
-- `GET /api/collection/Anthonin`
-- `GET /api/collection/Anthonin/stats`
-- `POST /api/collection`
-
-Exemple body :
-
-```json
-{
-  "ownerName": "Anthonin",
-  "stickerCode": "FRA20",
-  "quantityOwned": 2
-}
-```
+- `GET /api/stickers?category=FWC`
+- `GET /api/stickers?country=FRA`

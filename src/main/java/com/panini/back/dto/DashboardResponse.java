@@ -1,0 +1,1 @@
+package com.panini.back.dto; public record DashboardResponse(String username, String displayName, long totalStickers, long ownedStickers, long duplicateStickers, long missingStickers, double completionRate) {}
