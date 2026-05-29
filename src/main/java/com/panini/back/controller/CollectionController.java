@@ -11,7 +11,6 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/collection")
-@CrossOrigin(origins = "*")
 public class CollectionController {
     private final CollectionService collectionService;
 

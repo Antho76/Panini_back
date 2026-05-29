@@ -15,8 +15,9 @@ services:
       SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/panini
       SPRING_DATASOURCE_USERNAME: panini
       SPRING_DATASOURCE_PASSWORD: panini
+      SPRING_DATASOURCE_DRIVER: org.postgresql.Driver
       JWT_SECRET: change-me-change-me-change-me-change-me
-      FRONTEND_ORIGIN: http://localhost:5173
+      FRONTEND_ORIGIN: http://localhost:8000
     ports:
       - "8080:8080"
     depends_on:
