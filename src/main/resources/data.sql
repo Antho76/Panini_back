@@ -1,8 +1,5 @@
-DELETE FROM collection_items;
-DELETE FROM stickers;
-DELETE FROM categories;
-DELETE FROM teams;
-INSERT INTO categories (code,label) VALUES ('FWC','FWC'),('COUNTRY','Pays'),('WC_HISTORY','World Cup History'),('COCA','Coca-Cola'),('EXTRA','Extra Stickers');
+INSERT INTO categories (code,label) VALUES ('FWC','FWC'),('COUNTRY','Pays'),('WC_HISTORY','World Cup History'),('COCA','Coca-Cola'),('EXTRA','Extra Stickers')
+ON CONFLICT (code) DO NOTHING;
 INSERT INTO stickers (code,name,type,country_code,category_code,page_number,special_sticker) VALUES
 ('00','Panini Logo','HISTORY','WW','FWC',1,true),
 ('FWC1','Official Emblem','HISTORY','WW','FWC',2,true),
