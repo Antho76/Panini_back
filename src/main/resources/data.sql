@@ -1,568 +1,986 @@
--- Seed pour la collection Panini World Cup 2026
--- Données complètes avec tous les stickers
-
--- Categories
-INSERT INTO categories (code, label) VALUES
-  ('FWC', 'FWC'),
-  ('COUNTRY', 'Pays'),
-  ('WC_HISTORY', 'World Cup History'),
-  ('COCA', 'Coca-Cola'),
-  ('EXTRA', 'Extra Stickers')
-ON CONFLICT (code) DO NOTHING;
-
--- Teams (32 pays participant au WC 2026)
-INSERT INTO teams (code, name, group_name, confederation) VALUES
-  ('ARG', 'Argentine', 'Group C', 'CONMEBOL'),
-  ('AUS', 'Australie', 'Group D', 'AFC'),
-  ('BEL', 'Belgique', 'Group E', 'UEFA'),
-  ('BRA', 'Brésil', 'Group G', 'CONMEBOL'),
-  ('CAN', 'Canada', 'Group F', 'CONCACAF'),
-  ('CHI', 'Chili', 'Group B', 'CONMEBOL'),
-  ('COL', 'Colombie', 'Group D', 'CONMEBOL'),
-  ('CRO', 'Croatie', 'Group F', 'UEFA'),
-  ('DEN', 'Danemark', 'Group E', 'UEFA'),
-  ('ECU', 'Équateur', 'Group A', 'CONMEBOL'),
-  ('ENG', 'Angleterre', 'Group B', 'UEFA'),
-  ('FRA', 'France', 'Group D', 'UEFA'),
-  ('GER', 'Allemagne', 'Group E', 'UEFA'),
-  ('IRN', 'Iran', 'Group A', 'AFC'),
-  ('ITA', 'Italie', 'Group C', 'UEFA'),
-  ('JPN', 'Japon', 'Group C', 'AFC'),
-  ('KOR', 'Corée du Sud', 'Group H', 'AFC'),
-  ('MEX', 'Mexique', 'Group F', 'CONCACAF'),
-  ('MAR', 'Maroc', 'Group B', 'CAF'),
-  ('NED', 'Pays-Bas', 'Group G', 'UEFA'),
-  ('NGA', 'Nigéria', 'Group G', 'CAF'),
-  ('POL', 'Pologne', 'Group H', 'UEFA'),
-  ('POR', 'Portugal', 'Group H', 'UEFA'),
-  ('QAT', 'Qatar', 'Group A', 'AFC'),
-  ('RSA', 'Afrique du Sud', 'Group H', 'CAF'),
-  ('ESP', 'Espagne', 'Group C', 'UEFA'),
-  ('SUI', 'Suisse', 'Group G', 'UEFA'),
-  ('USA', 'États-Unis', 'Group F', 'CONCACAF'),
-  ('URU', 'Uruguay', 'Group C', 'CONMEBOL'),
-  ('GGN', 'Guyenne', 'Group A', 'CONCACAF')
-ON CONFLICT (code) DO NOTHING;
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('ARG01', 'Lionel Messi', 'PLAYER', 'ARG', 'COUNTRY', 1, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('ARG02', 'Ángel Di María', 'PLAYER', 'ARG', 'COUNTRY', 2, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('ARG03', 'Emiliano Martínez', 'PLAYER', 'ARG', 'COUNTRY', 3, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('ARG04', 'Julián Álvarez', 'PLAYER', 'ARG', 'COUNTRY', 4, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('ARG05', 'Rodrigo De Paul', 'PLAYER', 'ARG', 'COUNTRY', 5, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('FRA01', 'Kylian Mbappé', 'PLAYER', 'FRA', 'COUNTRY', 6, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('FRA02', 'Antoine Griezmann', 'PLAYER', 'FRA', 'COUNTRY', 7, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('FRA03', 'Hugo Lloris', 'PLAYER', 'FRA', 'COUNTRY', 8, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('FRA04', 'Ousmane Dembélé', 'PLAYER', 'FRA', 'COUNTRY', 9, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('FRA05', 'Aurélien Tchouaméni', 'PLAYER', 'FRA', 'COUNTRY', 10, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('BRA01', 'Neymar Jr', 'PLAYER', 'BRA', 'COUNTRY', 11, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('BRA02', 'Vinícius Júnior', 'PLAYER', 'BRA', 'COUNTRY', 12, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('BRA03', 'Casemiro', 'PLAYER', 'BRA', 'COUNTRY', 13, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('BRA04', 'Alisson', 'PLAYER', 'BRA', 'COUNTRY', 14, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('BRA05', 'Richarlison', 'PLAYER', 'BRA', 'COUNTRY', 15, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('ENG01', 'Harry Kane', 'PLAYER', 'ENG', 'COUNTRY', 16, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('ENG02', 'Jude Bellingham', 'PLAYER', 'ENG', 'COUNTRY', 17, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('ENG03', 'Bukayo Saka', 'PLAYER', 'ENG', 'COUNTRY', 18, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('ENG04', 'Declan Rice', 'PLAYER', 'ENG', 'COUNTRY', 19, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('ENG05', 'Jordan Pickford', 'PLAYER', 'ENG', 'COUNTRY', 20, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('ESP01', 'Lamine Yamal', 'PLAYER', 'ESP', 'COUNTRY', 21, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('ESP02', 'Pedri', 'PLAYER', 'ESP', 'COUNTRY', 22, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('ESP03', 'Rodri', 'PLAYER', 'ESP', 'COUNTRY', 23, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('ESP04', 'Unai Simón', 'PLAYER', 'ESP', 'COUNTRY', 24, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('ESP05', 'Dani Olmo', 'PLAYER', 'ESP', 'COUNTRY', 25, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('GER01', 'Manuel Neuer', 'PLAYER', 'GER', 'COUNTRY', 26, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('GER02', 'Joshua Kimmich', 'PLAYER', 'GER', 'COUNTRY', 27, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('GER03', 'Jamal Musiala', 'PLAYER', 'GER', 'COUNTRY', 28, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('GER04', 'İlhan Ture', 'PLAYER', 'GER', 'COUNTRY', 29, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('GER05', 'Kai Havertz', 'PLAYER', 'GER', 'COUNTRY', 30, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('POR01', 'Cristiano Ronaldo', 'PLAYER', 'POR', 'COUNTRY', 31, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('POR02', 'Bruno Fernandes', 'PLAYER', 'POR', 'COUNTRY', 32, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('POR03', 'Rafael Leão', 'PLAYER', 'POR', 'COUNTRY', 33, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('POR04', 'Diogo Jota', 'PLAYER', 'POR', 'COUNTRY', 34, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('POR05', 'Rúben Dias', 'PLAYER', 'POR', 'COUNTRY', 35, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('NED01', 'Virgil van Dijk', 'PLAYER', 'NED', 'COUNTRY', 36, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('NED02', 'Memphis Depay', 'PLAYER', 'NED', 'COUNTRY', 37, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('NED03', 'Cody Gakpo', 'PLAYER', 'NED', 'COUNTRY', 38, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('NED04', 'Andries Noppert', 'PLAYER', 'NED', 'COUNTRY', 39, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('NED05', 'Denzel Dumfries', 'PLAYER', 'NED', 'COUNTRY', 40, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('BEL01', 'Kevin De Bruyne', 'PLAYER', 'BEL', 'COUNTRY', 41, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('BEL02', 'Romelu Lukaku', 'PLAYER', 'BEL', 'COUNTRY', 42, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('BEL03', 'Thorgan Hazard', 'PLAYER', 'BEL', 'COUNTRY', 43, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('BEL04', 'Yannick Carrasco', 'PLAYER', 'BEL', 'COUNTRY', 44, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('BEL05', 'Timothy Castagne', 'PLAYER', 'BEL', 'COUNTRY', 45, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('CRO01', 'Luka Modrić', 'PLAYER', 'CRO', 'COUNTRY', 46, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('CRO02', 'Ivan Perišić', 'PLAYER', 'CRO', 'COUNTRY', 47, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('CRO03', 'Mateo Kovačić', 'PLAYER', 'CRO', 'COUNTRY', 48, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('CRO04', 'Dominik Livaković', 'PLAYER', 'CRO', 'COUNTRY', 49, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('CRO05', 'Joško Gvardiol', 'PLAYER', 'CRO', 'COUNTRY', 50, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('URU01', 'Darwin Núñez', 'PLAYER', 'URU', 'COUNTRY', 51, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('URU02', 'Federico Valverde', 'PLAYER', 'URU', 'COUNTRY', 52, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('URU03', 'Luis Suárez', 'PLAYER', 'URU', 'COUNTRY', 53, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('URU04', 'Ronald Araújo', 'PLAYER', 'URU', 'COUNTRY', 54, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('URU05', 'Ronald Fernández', 'PLAYER', 'URU', 'COUNTRY', 55, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('COL01', 'James Rodríguez', 'PLAYER', 'COL', 'COUNTRY', 56, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('COL02', 'Luis Díaz', 'PLAYER', 'COL', 'COUNTRY', 57, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('COL03', 'Radamel Falcao', 'PLAYER', 'COL', 'COUNTRY', 58, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('COL04', 'José Šuarez', 'PLAYER', 'COL', 'COUNTRY', 59, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('COL05', 'Davinson Sánchez', 'PLAYER', 'COL', 'COUNTRY', 60, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('MEX01', 'Hirving Lozano', 'PLAYER', 'MEX', 'COUNTRY', 61, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('MEX02', 'Raúl Jiménez', 'PLAYER', 'MEX', 'COUNTRY', 62, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('MEX03', 'Guillermo Ochoa', 'PLAYER', 'MEX', 'COUNTRY', 63, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('MEX04', 'Edson Álvarez', 'PLAYER', 'MEX', 'COUNTRY', 64, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('MEX05', 'Alexis Vega', 'PLAYER', 'MEX', 'COUNTRY', 65, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('JPN01', 'Kaoru Mitoma', 'PLAYER', 'JPN', 'COUNTRY', 66, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('JPN02', 'Takumi Minamino', 'PLAYER', 'JPN', 'COUNTRY', 67, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('JPN03', 'Harrison Nakamura', 'PLAYER', 'JPN', 'COUNTRY', 68, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('JPN04', 'Daichi Kamada', 'PLAYER', 'JPN', 'COUNTRY', 69, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('JPN05', 'Yukinari Sugawara', 'PLAYER', 'JPN', 'COUNTRY', 70, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('KOR01', 'Son Heung-min', 'PLAYER', 'KOR', 'COUNTRY', 71, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('KOR02', 'Kim Min-jae', 'PLAYER', 'KOR', 'COUNTRY', 72, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('KOR03', 'Lee Kang-in', 'PLAYER', 'KOR', 'COUNTRY', 73, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('KOR04', 'Cho Gue-sung', 'PLAYER', 'KOR', 'COUNTRY', 74, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('KOR05', 'Hwang Hee-chan', 'PLAYER', 'KOR', 'COUNTRY', 75, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('AUS01', 'Mathew Ryan', 'PLAYER', 'AUS', 'COUNTRY', 76, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('AUS02', 'Aaron Mooy', 'PLAYER', 'AUS', 'COUNTRY', 77, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('AUS03', 'Jamie Maclaren', 'PLAYER', 'AUS', 'COUNTRY', 78, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('AUS04', 'Mitchell Duke', 'PLAYER', 'AUS', 'COUNTRY', 79, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('AUS05', 'Jason Davidson', 'PLAYER', 'AUS', 'COUNTRY', 80, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('MAR01', 'Yassine Bounou', 'PLAYER', 'MAR', 'COUNTRY', 81, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('MAR02', 'Achraf Hakimi', 'PLAYER', 'MAR', 'COUNTRY', 82, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('MAR03', 'Hakim Ziyech', 'PLAYER', 'MAR', 'COUNTRY', 83, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('MAR04', 'Youssef En-Nesyri', 'PLAYER', 'MAR', 'COUNTRY', 84, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('MAR05', 'Noussair Mazraoui', 'PLAYER', 'MAR', 'COUNTRY', 85, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('SEN01', 'Sadio Mané', 'PLAYER', 'SEN', 'COUNTRY', 86, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('SEN02', 'Kalidou Koulibaly', 'PLAYER', 'SEN', 'COUNTRY', 87, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('SEN03', 'Edouard Mendy', 'PLAYER', 'SEN', 'COUNTRY', 88, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('SEN04', 'Ismaïla Sarr', 'PLAYER', 'SEN', 'COUNTRY', 89, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('SEN05', 'Khéphren Thuram', 'PLAYER', 'SEN', 'COUNTRY', 90, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('SUI01', 'Granit Xhaka', 'PLAYER', 'SUI', 'COUNTRY', 91, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('SUI02', 'Xherdan Shaqiri', 'PLAYER', 'SUI', 'COUNTRY', 92, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('SUI03', 'Yann Sommer', 'PLAYER', 'SUI', 'COUNTRY', 93, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('SUI04', 'Breel Embolo', 'PLAYER', 'SUI', 'COUNTRY', 94, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('SUI05', 'Manuel Akanji', 'PLAYER', 'SUI', 'COUNTRY', 95, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('POL01', 'Robert Lewandowski', 'PLAYER', 'POL', 'COUNTRY', 96, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('POL02', 'Wojciech Szczęsny', 'PLAYER', 'POL', 'COUNTRY', 97, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('POL03', 'Piotr Zieliński', 'PLAYER', 'POL', 'COUNTRY', 98, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('POL04', 'Sebastian Szymański', 'PLAYER', 'POL', 'COUNTRY', 99, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('POL05', 'Jan Bednarek', 'PLAYER', 'POL', 'COUNTRY', 100, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('WCH001', '1930 Uruguay', 'HISTORY', 'WW', 'WC_HISTORY', 100, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('WCH002', '1934 Italie', 'HISTORY', 'WW', 'WC_HISTORY', 101, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('WCH003', '1938 France', 'HISTORY', 'WW', 'WC_HISTORY', 102, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('WCH004', '1950 Brésil', 'HISTORY', 'WW', 'WC_HISTORY', 103, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('WCH005', '1954 Suisse', 'HISTORY', 'WW', 'WC_HISTORY', 104, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('WCH006', '1958 Suède', 'HISTORY', 'WW', 'WC_HISTORY', 105, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('WCH007', '1962 Chili', 'HISTORY', 'WW', 'WC_HISTORY', 106, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('WCH008', '1966 Angleterre', 'HISTORY', 'WW', 'WC_HISTORY', 107, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('WCH009', '1970 Mexique', 'HISTORY', 'WW', 'WC_HISTORY', 108, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('WCH010', '1974 Allemagne', 'HISTORY', 'WW', 'WC_HISTORY', 109, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('WCH011', '1978 Argentine', 'HISTORY', 'WW', 'WC_HISTORY', 110, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('WCH012', '1982 Espagne', 'HISTORY', 'WW', 'WC_HISTORY', 111, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('WCH013', '1986 Mexique', 'HISTORY', 'WW', 'WC_HISTORY', 112, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('WCH014', '1990 Italie', 'HISTORY', 'WW', 'WC_HISTORY', 113, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('WCH015', '1994 USA', 'HISTORY', 'WW', 'WC_HISTORY', 114, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('WCH016', '1998 France', 'HISTORY', 'WW', 'WC_HISTORY', 115, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('WCH017', '2002 Japon-Corée', 'HISTORY', 'WW', 'WC_HISTORY', 116, false);
-
--- FOIL Stickers (Official Tournament)
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('FOIL000', 'Panini Logo', 'FOIL', 'WW', 'FWC', 1, true);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('FOIL001', '2026 Official Emblem', 'FOIL', 'WW', 'FWC', 2, true);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('FOIL002', '2026 Official Trophy', 'FOIL', 'WW', 'FWC', 3, true);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('FOIL003', 'Official Mascots', 'FOIL', 'WW', 'FWC', 4, true);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('FOIL004', 'Official Match Ball', 'FOIL', 'WW', 'FWC', 5, true);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('FOIL005', 'Canada - Host Country', 'FOIL', 'CAN', 'FWC', 6, true);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('FOIL006', 'Mexico - Host Country', 'FOIL', 'MEX', 'FWC', 7, true);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('FOIL007', 'USA - Host Country', 'FOIL', 'USA', 'FWC', 8, true);
-
--- Additional Players for key nations
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('ARG06', 'Nicolás Tagliafico', 'PLAYER', 'ARG', 'COUNTRY', 101, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('ARG07', 'Alejandro Garnacho', 'PLAYER', 'ARG', 'COUNTRY', 102, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('ARG08', 'Lautaro Martínez', 'PLAYER', 'ARG', 'COUNTRY', 103, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('ARG09', 'Gonzalo Montiel', 'PLAYER', 'ARG', 'COUNTRY', 104, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('ARG10', 'Alexis Mac Allister', 'PLAYER', 'ARG', 'COUNTRY', 105, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('FRA06', 'Théo Hernández', 'PLAYER', 'FRA', 'COUNTRY', 106, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('FRA07', 'Eduardo Camavinga', 'PLAYER', 'FRA', 'COUNTRY', 107, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('FRA08', 'N''Golo Kanté', 'PLAYER', 'FRA', 'COUNTRY', 108, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('FRA09', 'Olivier Giroud', 'PLAYER', 'FRA', 'COUNTRY', 109, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('FRA10', 'Benjamin Pavard', 'PLAYER', 'FRA', 'COUNTRY', 110, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('BRA06', 'Éder Militão', 'PLAYER', 'BRA', 'COUNTRY', 111, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('BRA07', 'Lucas Paquetá', 'PLAYER', 'BRA', 'COUNTRY', 112, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('BRA08', 'Iuri Albert', 'PLAYER', 'BRA', 'COUNTRY', 113, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('BRA09', 'Gabriel Jesus', 'PLAYER', 'BRA', 'COUNTRY', 114, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('BRA10', 'Antony', 'PLAYER', 'BRA', 'COUNTRY', 115, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('ENG06', 'Mason Mount', 'PLAYER', 'ENG', 'COUNTRY', 116, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('ENG07', 'Phil Foden', 'PLAYER', 'ENG', 'COUNTRY', 117, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('ENG08', 'Luke Shaw', 'PLAYER', 'ENG', 'COUNTRY', 118, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('ENG09', 'Kalvin Phillips', 'PLAYER', 'ENG', 'COUNTRY', 119, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('ENG10', 'Jarrod Bowen', 'PLAYER', 'ENG', 'COUNTRY', 120, false);
-
--- USA Team Additional Players
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('USA01', 'Weston McKennie', 'PLAYER', 'USA', 'COUNTRY', 121, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('USA02', 'Gio Reyna', 'PLAYER', 'USA', 'COUNTRY', 122, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('USA03', 'Sergiño Dest', 'PLAYER', 'USA', 'COUNTRY', 123, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('USA04', 'Joe Scally', 'PLAYER', 'USA', 'COUNTRY', 124, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('USA05', 'Sean Johnson', 'PLAYER', 'USA', 'COUNTRY', 125, false);
-
--- CANADA Team Additional Players
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('CAN01', 'Lucas Cavallini', 'PLAYER', 'CAN', 'COUNTRY', 126, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('CAN02', 'Athanasios Rantos', 'PLAYER', 'CAN', 'COUNTRY', 127, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('CAN03', 'Cyle Larin', 'PLAYER', 'CAN', 'COUNTRY', 128, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('CAN04', 'Stephen Eustáquio', 'PLAYER', 'CAN', 'COUNTRY', 129, false);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('CAN05', 'Junior Hoilett', 'PLAYER', 'CAN', 'COUNTRY', 130, false);
-
--- COCA-COLA Special Set
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('COCA01', 'Lamine Yamal', 'SPECIAL', 'WW', 'COCA', 300, true);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('COCA02', 'Joshua Kimmich', 'SPECIAL', 'WW', 'COCA', 301, true);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('COCA03', 'Harry Kane', 'SPECIAL', 'WW', 'COCA', 302, true);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('COCA04', 'Kylian Mbappé', 'SPECIAL', 'WW', 'COCA', 303, true);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('COCA05', 'Antonee Robinson', 'SPECIAL', 'WW', 'COCA', 304, true);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('COCA06', 'Jefferson Lerma', 'SPECIAL', 'WW', 'COCA', 305, true);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('COCA07', 'Edson Álvarez', 'SPECIAL', 'WW', 'COCA', 306, true);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('COCA08', 'Virgil van Dijk', 'SPECIAL', 'WW', 'COCA', 307, true);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('COCA09', 'Alphonso Davies', 'SPECIAL', 'WW', 'COCA', 308, true);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('COCA10', 'Weston McKennie', 'SPECIAL', 'WW', 'COCA', 309, true);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('COCA11', 'Lautaro Martínez', 'SPECIAL', 'WW', 'COCA', 310, true);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('COCA12', 'Gabriel Magalhães', 'SPECIAL', 'WW', 'COCA', 311, true);
-
--- EXTRA Special Cards & Limited Editions
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('EXTRA01', 'Diamond Card', 'DIAMOND', 'WW', 'EXTRA', 400, true);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('EXTRA02', 'Gold Card', 'GOLD', 'WW', 'EXTRA', 401, true);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('EXTRA03', 'Silver Card', 'SILVER', 'WW', 'EXTRA', 402, true);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('EXTRA04', 'Holographic Card', 'HOLOGRAPHIC', 'WW', 'EXTRA', 403, true);
-
-INSERT INTO stickers (code, name, type, country_code, category_code, page_number, special_sticker)
-VALUES ('EXTRA05', 'Limited Edition', 'LIMITED', 'WW', 'EXTRA', 404, true);
-
+DELETE FROM collection_items;
+DELETE FROM stickers;
+DELETE FROM categories;
+DELETE FROM teams;
+INSERT INTO categories (code,label) VALUES ('FWC','FWC'),('COUNTRY','Pays'),('WC_HISTORY','World Cup History'),('COCA','Coca-Cola'),('EXTRA','Extra Stickers');
+INSERT INTO stickers (code,name,type,country_code,category_code,page_number,special_sticker) VALUES
+('00','Panini Logo','HISTORY','WW','FWC',1,true),
+('FWC1','Official Emblem','HISTORY','WW','FWC',2,true),
+('FWC2','Official Emblem','HISTORY','WW','FWC',3,true),
+('FWC3','Official Mascots','HISTORY','WW','FWC',4,true),
+('FWC4','Official Slogan','HISTORY','WW','FWC',5,true),
+('FWC5','Official Ball','HISTORY','WW','FWC',6,true),
+('FWC6','Canada','HISTORY','WW','FWC',7,true),
+('FWC7','Mexico','HISTORY','WW','FWC',8,true),
+('FWC8','USA','HISTORY','WW','FWC',9,true),
+('MEX1','Team Logo','PLAYER','MEX','COUNTRY',10,true),
+('MEX2','Luis Malagón','PLAYER','MEX','COUNTRY',11,false),
+('MEX3','Johan Vasquez','PLAYER','MEX','COUNTRY',12,false),
+('MEX4','Jorge Sánchez','PLAYER','MEX','COUNTRY',13,false),
+('MEX5','Cesar Montes','PLAYER','MEX','COUNTRY',14,false),
+('MEX6','Jesus Gallardo','PLAYER','MEX','COUNTRY',15,false),
+('MEX7','Israel Reyes','PLAYER','MEX','COUNTRY',16,false),
+('MEX8','Diego Lainez','PLAYER','MEX','COUNTRY',17,false),
+('MEX9','Carlos Rodriguez','PLAYER','MEX','COUNTRY',18,false),
+('MEX10','Edson Alvarez','PLAYER','MEX','COUNTRY',19,false),
+('MEX11','Orbelin Pineda','PLAYER','MEX','COUNTRY',20,false),
+('MEX12','Marcel Ruiz','PLAYER','MEX','COUNTRY',21,false),
+('MEX13','Team Photo','PLAYER','MEX','COUNTRY',22,false),
+('MEX14','Érick Sánchez','PLAYER','MEX','COUNTRY',23,false),
+('MEX15','Hirving Lozano','PLAYER','MEX','COUNTRY',24,false),
+('MEX16','Santiago Giménez','PLAYER','MEX','COUNTRY',25,false),
+('MEX17','Raúl Jiménez','PLAYER','MEX','COUNTRY',26,false),
+('MEX18','Alexis Vega','PLAYER','MEX','COUNTRY',27,false),
+('MEX19','Roberto Alvarado','PLAYER','MEX','COUNTRY',28,false),
+('MEX20','Cesar Huerta','PLAYER','MEX','COUNTRY',29,false),
+('RSA1','Team Logo','PLAYER','RSA','COUNTRY',30,true),
+('RSA2','Ronwen Williams','PLAYER','RSA','COUNTRY',31,false),
+('RSA3','Sipho Chaine','PLAYER','RSA','COUNTRY',32,false),
+('RSA4','Aubrey Modiba','PLAYER','RSA','COUNTRY',33,false),
+('RSA5','Samukele Kabini','PLAYER','RSA','COUNTRY',34,false),
+('RSA6','Mbekezeli Mbokazi','PLAYER','RSA','COUNTRY',35,false),
+('RSA7','Khulumani Ndamane','PLAYER','RSA','COUNTRY',36,false),
+('RSA8','Siyabonga Ngezana','PLAYER','RSA','COUNTRY',37,false),
+('RSA9','Khuliso Mudau','PLAYER','RSA','COUNTRY',38,false),
+('RSA10','Nkosinathi Sibisi','PLAYER','RSA','COUNTRY',39,false),
+('RSA11','Teboho Mokoena','PLAYER','RSA','COUNTRY',40,false),
+('RSA12','Thalente Mbatha','PLAYER','RSA','COUNTRY',41,false),
+('RSA13','Team Photo','PLAYER','RSA','COUNTRY',42,false),
+('RSA14','Bathasi Aubaas','PLAYER','RSA','COUNTRY',43,false),
+('RSA15','Yaya Sithole','PLAYER','RSA','COUNTRY',44,false),
+('RSA16','Sipho Mbule','PLAYER','RSA','COUNTRY',45,false),
+('RSA17','Lyle Foster','PLAYER','RSA','COUNTRY',46,false),
+('RSA18','Iqraam Rayners','PLAYER','RSA','COUNTRY',47,false),
+('RSA19','Mohau Nkota','PLAYER','RSA','COUNTRY',48,false),
+('RSA20','Oswin Appollis','PLAYER','RSA','COUNTRY',49,false),
+('KOR1','Team Logo','PLAYER','KOR','COUNTRY',50,true),
+('KOR2','Hyeon-woo Jo','PLAYER','KOR','COUNTRY',51,false),
+('KOR3','Seung-Gyu Kim','PLAYER','KOR','COUNTRY',52,false),
+('KOR4','Min-jae Kim','PLAYER','KOR','COUNTRY',53,false),
+('KOR5','Yu-min Cho','PLAYER','KOR','COUNTRY',54,false),
+('KOR6','Young-woo Seol','PLAYER','KOR','COUNTRY',55,false),
+('KOR7','Han-beom Lee','PLAYER','KOR','COUNTRY',56,false),
+('KOR8','Tae-seok Lee','PLAYER','KOR','COUNTRY',57,false),
+('KOR9','Myung-jae Lee','PLAYER','KOR','COUNTRY',58,false),
+('KOR10','Jae-sung Lee','PLAYER','KOR','COUNTRY',59,false),
+('KOR11','In-beom Hwang','PLAYER','KOR','COUNTRY',60,false),
+('KOR12','Kang-in Lee','PLAYER','KOR','COUNTRY',61,false),
+('KOR13','Team Photo','PLAYER','KOR','COUNTRY',62,false),
+('KOR14','Seung-ho Paik','PLAYER','KOR','COUNTRY',63,false),
+('KOR15','Jens Castrop','PLAYER','KOR','COUNTRY',64,false),
+('KOR16','Dongg-yeong Lee','PLAYER','KOR','COUNTRY',65,false),
+('KOR17','Gue-sung Cho','PLAYER','KOR','COUNTRY',66,false),
+('KOR18','Heung-min Son','PLAYER','KOR','COUNTRY',67,false),
+('KOR19','Hee-chan Hwang','PLAYER','KOR','COUNTRY',68,false),
+('KOR20','Hyeon-Gyu Oh','PLAYER','KOR','COUNTRY',69,false),
+('CZE1','Team Logo','PLAYER','CZE','COUNTRY',70,true),
+('CZE2','Matej Kovar','PLAYER','CZE','COUNTRY',71,false),
+('CZE3','Jindrich Stanek','PLAYER','CZE','COUNTRY',72,false),
+('CZE4','Ladislav Krejci','PLAYER','CZE','COUNTRY',73,false),
+('CZE5','Vladimir Coufal','PLAYER','CZE','COUNTRY',74,false),
+('CZE6','Jaroslav Zeleny','PLAYER','CZE','COUNTRY',75,false),
+('CZE7','Tomas Holes','PLAYER','CZE','COUNTRY',76,false),
+('CZE8','David Zima','PLAYER','CZE','COUNTRY',77,false),
+('CZE9','Michal Sadilek','PLAYER','CZE','COUNTRY',78,false),
+('CZE10','Lukas Provod','PLAYER','CZE','COUNTRY',79,false),
+('CZE11','Lukas Cerv','PLAYER','CZE','COUNTRY',80,false),
+('CZE12','Tomas Soucek','PLAYER','CZE','COUNTRY',81,false),
+('CZE13','Team Photo','PLAYER','CZE','COUNTRY',82,false),
+('CZE14','Pavel Sulc','PLAYER','CZE','COUNTRY',83,false),
+('CZE15','Matej Vydra','PLAYER','CZE','COUNTRY',84,false),
+('CZE16','Vasil Kusej','PLAYER','CZE','COUNTRY',85,false),
+('CZE17','Tomas Chory','PLAYER','CZE','COUNTRY',86,false),
+('CZE18','Vaclav Cerny','PLAYER','CZE','COUNTRY',87,false),
+('CZE19','Adam Hlozek','PLAYER','CZE','COUNTRY',88,false),
+('CZE20','Patrik Schick','PLAYER','CZE','COUNTRY',89,false),
+('CAN1','Team Logo','PLAYER','CAN','COUNTRY',90,true),
+('CAN2','Dayne St.Clair','PLAYER','CAN','COUNTRY',91,false),
+('CAN3','Alphonso Davies','PLAYER','CAN','COUNTRY',92,false),
+('CAN4','Alistair Johnston','PLAYER','CAN','COUNTRY',93,false),
+('CAN5','Samuel Adekugbe','PLAYER','CAN','COUNTRY',94,false),
+('CAN6','Riche Larvea','PLAYER','CAN','COUNTRY',95,false),
+('CAN7','Derek Cornelius','PLAYER','CAN','COUNTRY',96,false),
+('CAN8','Moïse Bombito','PLAYER','CAN','COUNTRY',97,false),
+('CAN9','Kamal Miller','PLAYER','CAN','COUNTRY',98,false),
+('CAN10','Stephen Eustáquio','PLAYER','CAN','COUNTRY',99,false),
+('CAN11','Ismaël Koné','PLAYER','CAN','COUNTRY',100,false),
+('CAN12','Jonathan Osorio','PLAYER','CAN','COUNTRY',101,false),
+('CAN13','Team Photo','PLAYER','CAN','COUNTRY',102,false),
+('CAN14','Jacob Shaffelburg','PLAYER','CAN','COUNTRY',103,false),
+('CAN15','Mathieu Choinière','PLAYER','CAN','COUNTRY',104,false),
+('CAN16','Niko Sigur','PLAYER','CAN','COUNTRY',105,false),
+('CAN17','Tajon Buchanan','PLAYER','CAN','COUNTRY',106,false),
+('CAN18','Liam Millar','PLAYER','CAN','COUNTRY',107,false),
+('CAN19','Cyle Larin','PLAYER','CAN','COUNTRY',108,false),
+('CAN20','Jonathan David','PLAYER','CAN','COUNTRY',109,false),
+('BIH1','Team Logo','PLAYER','BIH','COUNTRY',110,true),
+('BIH2','Nikola Vasilj','PLAYER','BIH','COUNTRY',111,false),
+('BIH3','Amer Dedic','PLAYER','BIH','COUNTRY',112,false),
+('BIH4','Sead Kolasinac','PLAYER','BIH','COUNTRY',113,false),
+('BIH5','Tarik Muharemovic','PLAYER','BIH','COUNTRY',114,false),
+('BIH6','Nihad Mujakic','PLAYER','BIH','COUNTRY',115,false),
+('BIH7','Nikola Katic','PLAYER','BIH','COUNTRY',116,false),
+('BIH8','Amir Hadziahmetovic','PLAYER','BIH','COUNTRY',117,false),
+('BIH9','Benjamin Tahirovic','PLAYER','BIH','COUNTRY',118,false),
+('BIH10','Armin Gigovic','PLAYER','BIH','COUNTRY',119,false),
+('BIH11','Ivan Sunjic','PLAYER','BIH','COUNTRY',120,false),
+('BIH12','Ivan Basic','PLAYER','BIH','COUNTRY',121,false),
+('BIH13','Team Photo','PLAYER','BIH','COUNTRY',122,false),
+('BIH14','Dzenis Burnic','PLAYER','BIH','COUNTRY',123,false),
+('BIH15','Esmir Bajraktarevic','PLAYER','BIH','COUNTRY',124,false),
+('BIH16','Amar Memic','PLAYER','BIH','COUNTRY',125,false),
+('BIH17','Ermedin Demirovic','PLAYER','BIH','COUNTRY',126,false),
+('BIH18','Edin Dzeko','PLAYER','BIH','COUNTRY',127,false),
+('BIH19','Samed Bazdar','PLAYER','BIH','COUNTRY',128,false),
+('BIH20','Haris Tabakovic','PLAYER','BIH','COUNTRY',129,false),
+('QAT1','Team Logo','PLAYER','QAT','COUNTRY',130,true),
+('QAT2','Meshaal Barsham','PLAYER','QAT','COUNTRY',131,false),
+('QAT3','Sultan Albrake','PLAYER','QAT','COUNTRY',132,false),
+('QAT4','Lucas Mendes','PLAYER','QAT','COUNTRY',133,false),
+('QAT5','Homam Ahmed','PLAYER','QAT','COUNTRY',134,false),
+('QAT6','Boualem Khoukhi','PLAYER','QAT','COUNTRY',135,false),
+('QAT7','Pedro Miguel','PLAYER','QAT','COUNTRY',136,false),
+('QAT8','Tarek Salman','PLAYER','QAT','COUNTRY',137,false),
+('QAT9','Mohamed Al-Mannai','PLAYER','QAT','COUNTRY',138,false),
+('QAT10','Karim Boudiaf','PLAYER','QAT','COUNTRY',139,false),
+('QAT11','Assim Madibo','PLAYER','QAT','COUNTRY',140,false),
+('QAT12','Ahmed Fatehi','PLAYER','QAT','COUNTRY',141,false),
+('QAT13','Team Photo','PLAYER','QAT','COUNTRY',142,false),
+('QAT14','Mohammed Waad','PLAYER','QAT','COUNTRY',143,false),
+('QAT15','Abdulaziz Hatem','PLAYER','QAT','COUNTRY',144,false),
+('QAT16','Hassan Al-Haydos','PLAYER','QAT','COUNTRY',145,false),
+('QAT17','Edmilson Junior','PLAYER','QAT','COUNTRY',146,false),
+('QAT18','Akram Hassan Afif','PLAYER','QAT','COUNTRY',147,false),
+('QAT19','Ahmed Al Ganehi','PLAYER','QAT','COUNTRY',148,false),
+('QAT20','Almoez Ali','PLAYER','QAT','COUNTRY',149,false),
+('SUI1','Team Logo','PLAYER','SUI','COUNTRY',150,true),
+('SUI2','Gregor Kobel','PLAYER','SUI','COUNTRY',151,false),
+('SUI3','Yvon Mvogo','PLAYER','SUI','COUNTRY',152,false),
+('SUI4','Manuel Akanji','PLAYER','SUI','COUNTRY',153,false),
+('SUI5','Ricardo Rodriguez','PLAYER','SUI','COUNTRY',154,false),
+('SUI6','Nico Elvedi','PLAYER','SUI','COUNTRY',155,false),
+('SUI7','Aurèle Amenda','PLAYER','SUI','COUNTRY',156,false),
+('SUI8','Silvan Widmer','PLAYER','SUI','COUNTRY',157,false),
+('SWI9','Granit Xhaka','PLAYER','SWI','COUNTRY',158,false),
+('SUI10','Denis Zakaria','PLAYER','SUI','COUNTRY',159,false),
+('SUI11','Remo Freuler','PLAYER','SUI','COUNTRY',160,false),
+('SUI12','Fabian Rieder','PLAYER','SUI','COUNTRY',161,false),
+('SUI13','Team Photo','PLAYER','SUI','COUNTRY',162,false),
+('SUI14','Ardon Jashari','PLAYER','SUI','COUNTRY',163,false),
+('SUI15','Johan Manzambi','PLAYER','SUI','COUNTRY',164,false),
+('SUI16','Michel Aebischer','PLAYER','SUI','COUNTRY',165,false),
+('SUI17','Breel Embolo','PLAYER','SUI','COUNTRY',166,false),
+('SUI18','Ruben Vargas','PLAYER','SUI','COUNTRY',167,false),
+('SUI19','Dan Ndoye','PLAYER','SUI','COUNTRY',168,false),
+('SWI20','Zeki Amdouni','PLAYER','SWI','COUNTRY',169,false),
+('BRA1','Team Logo','PLAYER','BRA','COUNTRY',170,true),
+('BRA2','Alisson','PLAYER','BRA','COUNTRY',171,false),
+('BRA3','Bento','PLAYER','BRA','COUNTRY',172,false),
+('BRA4','Marquinhos','PLAYER','BRA','COUNTRY',173,false),
+('BRA5','Éder Militão','PLAYER','BRA','COUNTRY',174,false),
+('BRA6','Gabriel Magalhães','PLAYER','BRA','COUNTRY',175,false),
+('BRA7','Danilo','PLAYER','BRA','COUNTRY',176,false),
+('BRA8','Wesley','PLAYER','BRA','COUNTRY',177,false),
+('BRA9','Lucas Paquetá','PLAYER','BRA','COUNTRY',178,false),
+('BRA10','Casemiro','PLAYER','BRA','COUNTRY',179,false),
+('BRA11','Bruno Guimarães','PLAYER','BRA','COUNTRY',180,false),
+('BRA12','Luiz Henrique','PLAYER','BRA','COUNTRY',181,false),
+('BRA13','Team Photo','PLAYER','BRA','COUNTRY',182,false),
+('BRA14','Vinicius Júnior','PLAYER','BRA','COUNTRY',183,false),
+('BRA15','Rodrygo','PLAYER','BRA','COUNTRY',184,false),
+('BRA16','João Pedro','PLAYER','BRA','COUNTRY',185,false),
+('BRA17','Matheus Cunha','PLAYER','BRA','COUNTRY',186,false),
+('BRA18','Gabriel Martinelli','PLAYER','BRA','COUNTRY',187,false),
+('BRA19','Raphinha','PLAYER','BRA','COUNTRY',188,false),
+('BRA20','Estévão','PLAYER','BRA','COUNTRY',189,false),
+('MAR1','Team Logo','PLAYER','MAR','COUNTRY',190,true),
+('MAR2','Yassine Bounou','PLAYER','MAR','COUNTRY',191,false),
+('MAR3','Munir El Kajoui','PLAYER','MAR','COUNTRY',192,false),
+('MAR4','Achraf Hakimi','PLAYER','MAR','COUNTRY',193,false),
+('MAR5','Noussair Mazraoui','PLAYER','MAR','COUNTRY',194,false),
+('MAR6','Nayef Aguerd','PLAYER','MAR','COUNTRY',195,false),
+('MAR7','Roman Saiss','PLAYER','MAR','COUNTRY',196,false),
+('MAR8','Jawad El Yamio','PLAYER','MAR','COUNTRY',197,false),
+('MAR9','Adam Masina','PLAYER','MAR','COUNTRY',198,false),
+('MAR10','Sofyan Amrabat','PLAYER','MAR','COUNTRY',199,false),
+('MAR11','Azzedine Ounahi','PLAYER','MAR','COUNTRY',200,false),
+('MAR12','Eliesse Ben Seghir','PLAYER','MAR','COUNTRY',201,false),
+('MAR13','Team Photo','PLAYER','MAR','COUNTRY',202,false),
+('MAR14','Bilal El Khannouss','PLAYER','MAR','COUNTRY',203,false),
+('MAR15','Ismael Saibari','PLAYER','MAR','COUNTRY',204,false),
+('MAR16','Youssef En-Nesyri','PLAYER','MAR','COUNTRY',205,false),
+('MAR17','Abde Ezzalzouli','PLAYER','MAR','COUNTRY',206,false),
+('MAR18','Soufiane Rahimi','PLAYER','MAR','COUNTRY',207,false),
+('MAR19','Brahim Diaz','PLAYER','MAR','COUNTRY',208,false),
+('MAR20','Ayoub El Kaabi','PLAYER','MAR','COUNTRY',209,false),
+('HAI1','Team Logo','PLAYER','HAI','COUNTRY',210,true),
+('HAI2','Johny Placide','PLAYER','HAI','COUNTRY',211,false),
+('HAI3','Carlens Arcus','PLAYER','HAI','COUNTRY',212,false),
+('HAI4','Martin Expérience','PLAYER','HAI','COUNTRY',213,false),
+('HAI5','Jean-Kevin Duverne','PLAYER','HAI','COUNTRY',214,false),
+('HAI6','Ricardo Adé','PLAYER','HAI','COUNTRY',215,false),
+('HAI7','Duke Lacroix','PLAYER','HAI','COUNTRY',216,false),
+('HAI8','Garven Metusala','PLAYER','HAI','COUNTRY',217,false),
+('HAI9','Hannes Delcroix','PLAYER','HAI','COUNTRY',218,false),
+('HAI10','Leverton Pierre','PLAYER','HAI','COUNTRY',219,false),
+('HAI11','Danley Jean Jacques','PLAYER','HAI','COUNTRY',220,false),
+('HAI12','Jean-Ricner Bellegarde','PLAYER','HAI','COUNTRY',221,false),
+('HAI13','Team Photo','PLAYER','HAI','COUNTRY',222,false),
+('HAI14','Christopher Attys','PLAYER','HAI','COUNTRY',223,false),
+('HAI15','Derrick Etienne Jr','PLAYER','HAI','COUNTRY',224,false),
+('HAI16','Josue Casimir','PLAYER','HAI','COUNTRY',225,false),
+('HAI17','Ruben Providence','PLAYER','HAI','COUNTRY',226,false),
+('HAI18','Duckens Nazon','PLAYER','HAI','COUNTRY',227,false),
+('HAI19','Louicius Deedson','PLAYER','HAI','COUNTRY',228,false),
+('HAI20','Frantzdy Pierrot','PLAYER','HAI','COUNTRY',229,false),
+('SCO1','Team Logo','PLAYER','SCO','COUNTRY',230,true),
+('SCO2','Angus Gunn','PLAYER','SCO','COUNTRY',231,false),
+('SCO3','Jack Hendry','PLAYER','SCO','COUNTRY',232,false),
+('SCO4','Kieran Tierney','PLAYER','SCO','COUNTRY',233,false),
+('SCO5','Aaron Hickey','PLAYER','SCO','COUNTRY',234,false),
+('SCO6','Andrew Robertson','PLAYER','SCO','COUNTRY',235,false),
+('SCO7','Scott McKenna','PLAYER','SCO','COUNTRY',236,false),
+('SCO8','John Souttar','PLAYER','SCO','COUNTRY',237,false),
+('SCO9','Anthony Ralston','PLAYER','SCO','COUNTRY',238,false),
+('SCO10','Grant Hanley','PLAYER','SCO','COUNTRY',239,false),
+('SCO11','Scott McTominay','PLAYER','SCO','COUNTRY',240,false),
+('SCO12','Billy Gilmour','PLAYER','SCO','COUNTRY',241,false),
+('SCO13','Team Photo','PLAYER','SCO','COUNTRY',242,false),
+('SCO14','Lewis Ferguson','PLAYER','SCO','COUNTRY',243,false),
+('SCO15','Ryan Christie','PLAYER','SCO','COUNTRY',244,false),
+('SCO16','Kenny McLean','PLAYER','SCO','COUNTRY',245,false),
+('SCO17','John McGinn','PLAYER','SCO','COUNTRY',246,false),
+('SCO18','Lyndon Dykes','PLAYER','SCO','COUNTRY',247,false),
+('SCO19','Che Adams','PLAYER','SCO','COUNTRY',248,false),
+('SCO20','Ben Gannon-Doak','PLAYER','SCO','COUNTRY',249,false),
+('USA1','Team Logo','PLAYER','USA','COUNTRY',250,true),
+('USA2','Math Freese','PLAYER','USA','COUNTRY',251,false),
+('USA3','Chris Richards','PLAYER','USA','COUNTRY',252,false),
+('USA4','Tim Ream','PLAYER','USA','COUNTRY',253,false),
+('USA5','Mark McKenzie','PLAYER','USA','COUNTRY',254,false),
+('USA6','Alex Freeman','PLAYER','USA','COUNTRY',255,false),
+('USA7','Antonee Robinson','PLAYER','USA','COUNTRY',256,false),
+('USA8','Tyler Adams','PLAYER','USA','COUNTRY',257,false),
+('USA9','Tanner Tessmann','PLAYER','USA','COUNTRY',258,false),
+('USA10','Weston McKenny','PLAYER','USA','COUNTRY',259,false),
+('USA11','Christian Roldan','PLAYER','USA','COUNTRY',260,false),
+('USA12','Timothy Weah','PLAYER','USA','COUNTRY',261,false),
+('USA13','Team Photo','PLAYER','USA','COUNTRY',262,false),
+('USA14','Diego Luna','PLAYER','USA','COUNTRY',263,false),
+('USA15','Malik Tillman','PLAYER','USA','COUNTRY',264,false),
+('USA16','Christian Pulisic','PLAYER','USA','COUNTRY',265,false),
+('USA17','Brenden Aaronson','PLAYER','USA','COUNTRY',266,false),
+('USA18','Ricardo Pepi','PLAYER','USA','COUNTRY',267,false),
+('USA19','Haji Wright','PLAYER','USA','COUNTRY',268,false),
+('USA20','Folarin Balogun','PLAYER','USA','COUNTRY',269,false),
+('PAR1','Team Logo','PLAYER','PAR','COUNTRY',270,true),
+('PAR2','Roberto Fernandez','PLAYER','PAR','COUNTRY',271,false),
+('PAR3','Orlando Gill','PLAYER','PAR','COUNTRY',272,false),
+('PAR4','Gustavo Gomez','PLAYER','PAR','COUNTRY',273,false),
+('PAR5','Fabián Balbuena','PLAYER','PAR','COUNTRY',274,false),
+('PAR6','Juan José Cáceres','PLAYER','PAR','COUNTRY',275,false),
+('PAR7','Omar Alderete','PLAYER','PAR','COUNTRY',276,false),
+('PAR8','Junior Alonso','PLAYER','PAR','COUNTRY',277,false),
+('PAR9','Mathías Villasanti','PLAYER','PAR','COUNTRY',278,false),
+('PAR10','Diego Gomez','PLAYER','PAR','COUNTRY',279,false),
+('PAR11','Damián Bobadilla','PLAYER','PAR','COUNTRY',280,false),
+('PAR12','Andres Cubas','PLAYER','PAR','COUNTRY',281,false),
+('PAR13','Team Photo','PLAYER','PAR','COUNTRY',282,false),
+('PAR14','Matias Galarza Fonda','PLAYER','PAR','COUNTRY',283,false),
+('PAR15','Julio Enciso','PLAYER','PAR','COUNTRY',284,false),
+('PAR16','Alejandro Romero Gamarra','PLAYER','PAR','COUNTRY',285,false),
+('PAR17','Miguel Almirón','PLAYER','PAR','COUNTRY',286,false),
+('PAR18','Ramon Sosa','PLAYER','PAR','COUNTRY',287,false),
+('PAR19','Angel Romero','PLAYER','PAR','COUNTRY',288,false),
+('PAR20','Antonio Sanabria','PLAYER','PAR','COUNTRY',289,false),
+('AUS1','Team Logo','PLAYER','AUS','COUNTRY',290,true),
+('AUS2','Mathew Ryan','PLAYER','AUS','COUNTRY',291,false),
+('AUS3','Joe Gauci','PLAYER','AUS','COUNTRY',292,false),
+('AUS4','Harry Souttar','PLAYER','AUS','COUNTRY',293,false),
+('AUS5','Alessandro Circati','PLAYER','AUS','COUNTRY',294,false),
+('AUS6','Jordan Bos','PLAYER','AUS','COUNTRY',295,false),
+('AUS7','Aziz Behich','PLAYER','AUS','COUNTRY',296,false),
+('AUS8','Cameron Burgess','PLAYER','AUS','COUNTRY',297,false),
+('AUS9','Lewis Miller','PLAYER','AUS','COUNTRY',298,false),
+('AUS10','Milos Degenek','PLAYER','AUS','COUNTRY',299,false),
+('AUS11','Jackson Irvine','PLAYER','AUS','COUNTRY',300,false),
+('AUS12','Riley McGree','PLAYER','AUS','COUNTRY',301,false),
+('AUS13','Team Photo','PLAYER','AUS','COUNTRY',302,false),
+('AUS14','Aiden O''Neill','PLAYER','AUS','COUNTRY',303,false),
+('AUS15','Connor Metcalfe','PLAYER','AUS','COUNTRY',304,false),
+('AUS16','Patrick Yazbek','PLAYER','AUS','COUNTRY',305,false),
+('AUS17','Craig Goodwin','PLAYER','AUS','COUNTRY',306,false),
+('AUS18','Kusini Vengi','PLAYER','AUS','COUNTRY',307,false),
+('AUS19','Nestory Irankunda','PLAYER','AUS','COUNTRY',308,false),
+('AUS20','Mohamed Touré','PLAYER','AUS','COUNTRY',309,false),
+('TUR1','Team Logo','PLAYER','TUR','COUNTRY',310,true),
+('TUR2','Ugurcan Cakir','PLAYER','TUR','COUNTRY',311,false),
+('TUR3','Mert Muldur','PLAYER','TUR','COUNTRY',312,false),
+('TUR4','Zeki Celik','PLAYER','TUR','COUNTRY',313,false),
+('TUR5','Abdulkerim Bardakci','PLAYER','TUR','COUNTRY',314,false),
+('TUR6','Caglar Soyuncu','PLAYER','TUR','COUNTRY',315,false),
+('TUR7','Merih Demiral','PLAYER','TUR','COUNTRY',316,false),
+('TUR8','Ferdi Kadioglu','PLAYER','TUR','COUNTRY',317,false),
+('TUR9','Kaan Ayhan','PLAYER','TUR','COUNTRY',318,false),
+('TUR10','Ismail Yuksek','PLAYER','TUR','COUNTRY',319,false),
+('TUR11','Hakan Calhanoglu','PLAYER','TUR','COUNTRY',320,false),
+('TUR12','Orkun Kokcu','PLAYER','TUR','COUNTRY',321,false),
+('TUR13','Team Photo','PLAYER','TUR','COUNTRY',322,false),
+('TUR14','Arda Guler','PLAYER','TUR','COUNTRY',323,false),
+('TUR15','Irfan Can Kahveci','PLAYER','TUR','COUNTRY',324,false),
+('TUR16','Yunus Akgun','PLAYER','TUR','COUNTRY',325,false),
+('TUR17','Can Uzun','PLAYER','TUR','COUNTRY',326,false),
+('TUR18','Baris Alper Yilmaz','PLAYER','TUR','COUNTRY',327,false),
+('TUR19','Kerem Akturkoglu','PLAYER','TUR','COUNTRY',328,false),
+('TUR20','Kenan Yildiz','PLAYER','TUR','COUNTRY',329,false),
+('GER1','Team Logo','PLAYER','GER','COUNTRY',330,true),
+('GER2','Marc-André ter Stegen','PLAYER','GER','COUNTRY',331,false),
+('GER3','Jonathan Tah','PLAYER','GER','COUNTRY',332,false),
+('GER4','David Raum','PLAYER','GER','COUNTRY',333,false),
+('GER5','Nico Schlotterbeck','PLAYER','GER','COUNTRY',334,false),
+('GER6','Antonio Rüdiger','PLAYER','GER','COUNTRY',335,false),
+('GER7','Waldemar Anton','PLAYER','GER','COUNTRY',336,false),
+('GER8','Ridle Baku','PLAYER','GER','COUNTRY',337,false),
+('GER9','Maximilian Mittelstadt','PLAYER','GER','COUNTRY',338,false),
+('GER10','Joshua Kimmich','PLAYER','GER','COUNTRY',339,false),
+('GER11','Florian Wirtz','PLAYER','GER','COUNTRY',340,false),
+('GER12','Felix Nmecha','PLAYER','GER','COUNTRY',341,false),
+('GER13','Team Photo','PLAYER','GER','COUNTRY',342,false),
+('GER14','Leon Goretzka','PLAYER','GER','COUNTRY',343,false),
+('GER15','Jamal Musiala','PLAYER','GER','COUNTRY',344,false),
+('GER16','Serge Gnabry','PLAYER','GER','COUNTRY',345,false),
+('GER17','Kai Havertz','PLAYER','GER','COUNTRY',346,false),
+('GER18','Leroy Sane','PLAYER','GER','COUNTRY',347,false),
+('GER19','Karim Adeyemi','PLAYER','GER','COUNTRY',348,false),
+('GER20','Nick Woltemade','PLAYER','GER','COUNTRY',349,false),
+('CUW1','Team Logo','PLAYER','CUW','COUNTRY',350,true),
+('CUW2','Eloy Room','PLAYER','CUW','COUNTRY',351,false),
+('CUW3','Armando Obispo','PLAYER','CUW','COUNTRY',352,false),
+('CUW4','Sherel Floranus','PLAYER','CUW','COUNTRY',353,false),
+('CUW5','Jurien Gaari','PLAYER','CUW','COUNTRY',354,false),
+('CUW6','Joshua Brenet','PLAYER','CUW','COUNTRY',355,false),
+('CUW7','Roshon Van Eijma','PLAYER','CUW','COUNTRY',356,false),
+('CUW8','Shurandy Sambo','PLAYER','CUW','COUNTRY',357,false),
+('CUW9','Livano Comenencia','PLAYER','CUW','COUNTRY',358,false),
+('CUW10','Godfried Roemeratoe','PLAYER','CUW','COUNTRY',359,false),
+('CUW11','Juninho Bacuna','PLAYER','CUW','COUNTRY',360,false),
+('CUW12','Leandro Bacuna','PLAYER','CUW','COUNTRY',361,false),
+('CUW13','Team Photo','PLAYER','CUW','COUNTRY',362,false),
+('CUW14','Tahith Chong','PLAYER','CUW','COUNTRY',363,false),
+('CUW15','Kenji Gorre','PLAYER','CUW','COUNTRY',364,false),
+('CUW16','Jearl Margaritha','PLAYER','CUW','COUNTRY',365,false),
+('CUW17','Jurgen Locadia','PLAYER','CUW','COUNTRY',366,false),
+('CUW18','Jeremy Antonisse','PLAYER','CUW','COUNTRY',367,false),
+('CUW19','Gervane Kastaneer','PLAYER','CUW','COUNTRY',368,false),
+('CUW20','Sontje Hansen','PLAYER','CUW','COUNTRY',369,false),
+('CIV1','Team Logo','PLAYER','CIV','COUNTRY',370,true),
+('CIV2','Yahia Fofana','PLAYER','CIV','COUNTRY',371,false),
+('CIV3','Ghislain Konan','PLAYER','CIV','COUNTRY',372,false),
+('CIV4','Wilfried Singo','PLAYER','CIV','COUNTRY',373,false),
+('CIV5','Odilon Kossounou','PLAYER','CIV','COUNTRY',374,false),
+('CIV6','Evan Ndicka','PLAYER','CIV','COUNTRY',375,false),
+('CIV7','Willy Boly','PLAYER','CIV','COUNTRY',376,false),
+('CIV8','Emmanuel Agbadou','PLAYER','CIV','COUNTRY',377,false),
+('CIV9','Ousmane Diomande','PLAYER','CIV','COUNTRY',378,false),
+('CIV10','Franck Kessie','PLAYER','CIV','COUNTRY',379,false),
+('CIV11','Seko Fofana','PLAYER','CIV','COUNTRY',380,false),
+('CIV12','Ibrahim Sangare','PLAYER','CIV','COUNTRY',381,false),
+('CIV13','Team Photo','PLAYER','CIV','COUNTRY',382,false),
+('CIV14','Jean-Philippe Gbamin','PLAYER','CIV','COUNTRY',383,false),
+('CIV15','Amad Diallo','PLAYER','CIV','COUNTRY',384,false),
+('CIV16','Sébastien Haller','PLAYER','CIV','COUNTRY',385,false),
+('CIV17','Simon Adingra','PLAYER','CIV','COUNTRY',386,false),
+('CIV18','Yan Diomande','PLAYER','CIV','COUNTRY',387,false),
+('CIV19','Evann Guessand','PLAYER','CIV','COUNTRY',388,false),
+('CIV20','Oumar Diakite','PLAYER','CIV','COUNTRY',389,false),
+('ECU1','Team Logo','PLAYER','ECU','COUNTRY',390,true),
+('ECU2','Hernán Galíndez','PLAYER','ECU','COUNTRY',391,false),
+('ECU3','Gonzalo Valle','PLAYER','ECU','COUNTRY',392,false),
+('ECU4','Piero Hincapié','PLAYER','ECU','COUNTRY',393,false),
+('ECU5','Pervis Estupiñán','PLAYER','ECU','COUNTRY',394,false),
+('ECU6','Willian Pacho','PLAYER','ECU','COUNTRY',395,false),
+('ECU7','Ángelo Preciado','PLAYER','ECU','COUNTRY',396,false),
+('ECU8','Joel Ordóñez','PLAYER','ECU','COUNTRY',397,false),
+('ECU9','Moises Caicedo','PLAYER','ECU','COUNTRY',398,false),
+('ECU10','Alan Franco','PLAYER','ECU','COUNTRY',399,false),
+('ECU11','Kendry Paez','PLAYER','ECU','COUNTRY',400,false),
+('ECU12','Pedro Vite','PLAYER','ECU','COUNTRY',401,false),
+('ECU13','Team Photo','PLAYER','ECU','COUNTRY',402,false),
+('ECU14','John Veboah','PLAYER','ECU','COUNTRY',403,false),
+('ECU15','Leonardo Campana','PLAYER','ECU','COUNTRY',404,false),
+('ECU16','Gonzalo Plata','PLAYER','ECU','COUNTRY',405,false),
+('ECU17','Nilson Angulo','PLAYER','ECU','COUNTRY',406,false),
+('ECU18','Alan Minda','PLAYER','ECU','COUNTRY',407,false),
+('ECU19','Kevin Rodriguez','PLAYER','ECU','COUNTRY',408,false),
+('ECU20','Enner Valencia','PLAYER','ECU','COUNTRY',409,false),
+('NED1','Team Logo','PLAYER','NED','COUNTRY',410,true),
+('NED2','Bart Verbruggen','PLAYER','NED','COUNTRY',411,false),
+('NED3','Virgil van Dijk','PLAYER','NED','COUNTRY',412,false),
+('NED4','Micky van de Ven','PLAYER','NED','COUNTRY',413,false),
+('NED5','Jurrien Timber','PLAYER','NED','COUNTRY',414,false),
+('NED6','Denzel Dumfries','PLAYER','NED','COUNTRY',415,false),
+('NED7','Nathan Aké','PLAYER','NED','COUNTRY',416,false),
+('NED8','Jeremie Frimpong','PLAYER','NED','COUNTRY',417,false),
+('NED9','Jan Paul van Hecke','PLAYER','NED','COUNTRY',418,false),
+('NED10','Tijjani Reijnders','PLAYER','NED','COUNTRY',419,false),
+('NED11','Ryan Gravenberch','PLAYER','NED','COUNTRY',420,false),
+('NED12','Teun Koopmeiners','PLAYER','NED','COUNTRY',421,false),
+('NED13','Team Photo','PLAYER','NED','COUNTRY',422,false),
+('NED14','Frenkie de Jong','PLAYER','NED','COUNTRY',423,false),
+('NED15','Xavi Simons','PLAYER','NED','COUNTRY',424,false),
+('NED16','Justin Kluivert','PLAYER','NED','COUNTRY',425,false),
+('NED17','Memphis Depay','PLAYER','NED','COUNTRY',426,false),
+('NED18','Donyell Malen','PLAYER','NED','COUNTRY',427,false),
+('NED19','Wout Weghorst','PLAYER','NED','COUNTRY',428,false),
+('NED20','Cody Gakpo','PLAYER','NED','COUNTRY',429,false),
+('JPN1','Team Logo','PLAYER','JPN','COUNTRY',430,true),
+('JPN2','Zion Suzuki','PLAYER','JPN','COUNTRY',431,false),
+('JPN3','Henry Heroki Mochizuki','PLAYER','JPN','COUNTRY',432,false),
+('JPN4','Ayumu Seko','PLAYER','JPN','COUNTRY',433,false),
+('JPN5','Junnosuke Suzuki','PLAYER','JPN','COUNTRY',434,false),
+('JPN6','Shogo Taniguchi','PLAYER','JPN','COUNTRY',435,false),
+('JPN7','Tsuyoshi Watanabe','PLAYER','JPN','COUNTRY',436,false),
+('JPN8','Kaishu Sano','PLAYER','JPN','COUNTRY',437,false),
+('JPN9','Yuki Soma','PLAYER','JPN','COUNTRY',438,false),
+('JPN10','Ao Tanaka','PLAYER','JPN','COUNTRY',439,false),
+('JPN11','Daichi Kamada','PLAYER','JPN','COUNTRY',440,false),
+('JPN12','Takefusa Kubo','PLAYER','JPN','COUNTRY',441,false),
+('JPN13','Team Photo','PLAYER','JPN','COUNTRY',442,false),
+('JPN14','Ritsu Doan','PLAYER','JPN','COUNTRY',443,false),
+('JPN15','Keito Nakamura','PLAYER','JPN','COUNTRY',444,false),
+('JPN16','Takumi Minamino','PLAYER','JPN','COUNTRY',445,false),
+('JPN17','Shuto Machino','PLAYER','JPN','COUNTRY',446,false),
+('JPN18','Junya Ito','PLAYER','JPN','COUNTRY',447,false),
+('JPN19','Koki Ogawa','PLAYER','JPN','COUNTRY',448,false),
+('JPN20','Ayase Ueda','PLAYER','JPN','COUNTRY',449,false),
+('SWE1','Team Logo','PLAYER','SWE','COUNTRY',450,true),
+('SWE2','Victor Johansson','PLAYER','SWE','COUNTRY',451,false),
+('SWE3','Isak Hien','PLAYER','SWE','COUNTRY',452,false),
+('SWE4','Gabriel Gudmundsson','PLAYER','SWE','COUNTRY',453,false),
+('SWE5','Emil Holm','PLAYER','SWE','COUNTRY',454,false),
+('SWE6','Victor Nilsson Lindelöf','PLAYER','SWE','COUNTRY',455,false),
+('SWE7','Gustaf Lagerbielke','PLAYER','SWE','COUNTRY',456,false),
+('SWE8','Lucas Bergvall','PLAYER','SWE','COUNTRY',457,false),
+('SWE9','Hugo Larsson','PLAYER','SWE','COUNTRY',458,false),
+('SWE10','Jesper Karlström','PLAYER','SWE','COUNTRY',459,false),
+('SWE11','Yasin Ayari','PLAYER','SWE','COUNTRY',460,false),
+('SWE12','Mattias Svanberg','PLAYER','SWE','COUNTRY',461,false),
+('SWE13','Team Photo','PLAYER','SWE','COUNTRY',462,false),
+('SWE14','Daniel Svensson','PLAYER','SWE','COUNTRY',463,false),
+('SWE15','Ken Sema','PLAYER','SWE','COUNTRY',464,false),
+('SWE16','Roony Bardghji','PLAYER','SWE','COUNTRY',465,false),
+('SWE17','Dejan Kulusevski','PLAYER','SWE','COUNTRY',466,false),
+('SWE18','Anthony Elanga','PLAYER','SWE','COUNTRY',467,false),
+('SWE19','Alexander Isak','PLAYER','SWE','COUNTRY',468,false),
+('SWE20','Viktor Gyökeres','PLAYER','SWE','COUNTRY',469,false),
+('TUN1','Team Logo','PLAYER','TUN','COUNTRY',470,true),
+('TUN2','Bechir Ben Said','PLAYER','TUN','COUNTRY',471,false),
+('TUN3','Aymen Dahmen','PLAYER','TUN','COUNTRY',472,false),
+('TUN4','Yan Valery','PLAYER','TUN','COUNTRY',473,false),
+('TUN5','Montassar Talbi','PLAYER','TUN','COUNTRY',474,false),
+('TUN6','Yassine Meriah','PLAYER','TUN','COUNTRY',475,false),
+('TUN7','Ali Abdi','PLAYER','TUN','COUNTRY',476,false),
+('TUN8','Dylan Bronn','PLAYER','TUN','COUNTRY',477,false),
+('TUN9','Ellyes Skhiri','PLAYER','TUN','COUNTRY',478,false),
+('TUN10','Aissa Laidouni','PLAYER','TUN','COUNTRY',479,false),
+('TUN11','Ferjani Sassi','PLAYER','TUN','COUNTRY',480,false),
+('TUN12','Mohamed Ali Ben Romdhane','PLAYER','TUN','COUNTRY',481,false),
+('TUN13','Team Photo','PLAYER','TUN','COUNTRY',482,false),
+('TUN14','Hannibal Mejbri','PLAYER','TUN','COUNTRY',483,false),
+('TUN15','Elias Achouri','PLAYER','TUN','COUNTRY',484,false),
+('TUN16','Elias Saad','PLAYER','TUN','COUNTRY',485,false),
+('TUN17','Hazem Mastouri','PLAYER','TUN','COUNTRY',486,false),
+('TUN18','Ismael Gharbi','PLAYER','TUN','COUNTRY',487,false),
+('TUN19','Sayfallah Ltaief','PLAYER','TUN','COUNTRY',488,false),
+('TUN20','Naim Sliti','PLAYER','TUN','COUNTRY',489,false),
+('BEL1','Team Logo','PLAYER','BEL','COUNTRY',490,true),
+('BEL2','Thibaut Courtois','PLAYER','BEL','COUNTRY',491,false),
+('BEL3','Arthur Theate','PLAYER','BEL','COUNTRY',492,false),
+('BEL4','Timothy Castagne','PLAYER','BEL','COUNTRY',493,false),
+('BEL5','Zeno Debast','PLAYER','BEL','COUNTRY',494,false),
+('BEL6','Brandon Mechele','PLAYER','BEL','COUNTRY',495,false),
+('BEL7','Maxim De Cuyper','PLAYER','BEL','COUNTRY',496,false),
+('BEL8','Thomas Meunier','PLAYER','BEL','COUNTRY',497,false),
+('BEL9','Youri Tielemans','PLAYER','BEL','COUNTRY',498,false),
+('BEL10','Amadou Onana','PLAYER','BEL','COUNTRY',499,false),
+('BEL11','Nicolas Raskin','PLAYER','BEL','COUNTRY',500,false),
+('BEL12','Alexis Saelemaekers','PLAYER','BEL','COUNTRY',501,false),
+('BEL13','Team Photo','PLAYER','BEL','COUNTRY',502,false),
+('BEL14','Hans Vanaken','PLAYER','BEL','COUNTRY',503,false),
+('BEL15','Kevin De Bruyne','PLAYER','BEL','COUNTRY',504,false),
+('BEL16','Jérémy Doku','PLAYER','BEL','COUNTRY',505,false),
+('BEL17','Charles De Ketelaere','PLAYER','BEL','COUNTRY',506,false),
+('BEL18','Leandro Trossard','PLAYER','BEL','COUNTRY',507,false),
+('BEL19','Loïs Openda','PLAYER','BEL','COUNTRY',508,false),
+('BEL20','Romelu Lukaku','PLAYER','BEL','COUNTRY',509,false),
+('EGY1','Team Logo','PLAYER','EGY','COUNTRY',510,true),
+('EGY2','Mohamed El Shenawy','PLAYER','EGY','COUNTRY',511,false),
+('EGY3','Mohamed Hany','PLAYER','EGY','COUNTRY',512,false),
+('EGY4','Mohamed Hamdy','PLAYER','EGY','COUNTRY',513,false),
+('EGY5','Yasser Ibrahim','PLAYER','EGY','COUNTRY',514,false),
+('EGY6','Khaled Sobhi','PLAYER','EGY','COUNTRY',515,false),
+('EGY7','Ramy Rabia','PLAYER','EGY','COUNTRY',516,false),
+('EGY8','Hossam Abdelmaguid','PLAYER','EGY','COUNTRY',517,false),
+('EGY9','Ahmed Fatouh','PLAYER','EGY','COUNTRY',518,false),
+('EGY10','Marwan Attia','PLAYER','EGY','COUNTRY',519,false),
+('EGY11','Zizo','PLAYER','EGY','COUNTRY',520,false),
+('EGY12','Hamdy Fathy','PLAYER','EGY','COUNTRY',521,false),
+('EGY13','Team Photo','PLAYER','EGY','COUNTRY',522,false),
+('EGY14','Mohamed Lasheen','PLAYER','EGY','COUNTRY',523,false),
+('EGY15','Emam Ashour','PLAYER','EGY','COUNTRY',524,false),
+('EGY16','Osama Faisal','PLAYER','EGY','COUNTRY',525,false),
+('EGY17','Mohamed Salah','PLAYER','EGY','COUNTRY',526,false),
+('EGY18','Mostafa Mohamed','PLAYER','EGY','COUNTRY',527,false),
+('EGY19','Trezeguet','PLAYER','EGY','COUNTRY',528,false),
+('EGY20','Omar Marmoush','PLAYER','EGY','COUNTRY',529,false),
+('IRN1','Team Logo','PLAYER','IRN','COUNTRY',530,true),
+('IRN2','Alireza Beiranvand','PLAYER','IRN','COUNTRY',531,false),
+('IRN3','Morteza Pouraliganji','PLAYER','IRN','COUNTRY',532,false),
+('IRN4','Ehsan Hajsafi','PLAYER','IRN','COUNTRY',533,false),
+('IRN5','Milad Mohammadi','PLAYER','IRN','COUNTRY',534,false),
+('IRN6','Shojae Khalilzadeh','PLAYER','IRN','COUNTRY',535,false),
+('IRN7','Ramin Rezaeian','PLAYER','IRN','COUNTRY',536,false),
+('IRN8','Hossein Kanaani','PLAYER','IRN','COUNTRY',537,false),
+('IRN9','Sadegh Moharrami','PLAYER','IRN','COUNTRY',538,false),
+('IRN10','Saleh Hardani','PLAYER','IRN','COUNTRY',539,false),
+('IRN11','Saeed Ezatolahi','PLAYER','IRN','COUNTRY',540,false),
+('IRN12','Saman Ghoddos','PLAYER','IRN','COUNTRY',541,false),
+('IRN13','Team Photo','PLAYER','IRN','COUNTRY',542,false),
+('IRN14','Omid Noorafkan','PLAYER','IRN','COUNTRY',543,false),
+('IRN15','Roozbeh Cheshmi','PLAYER','IRN','COUNTRY',544,false),
+('IRN16','Mohammad Mohebi','PLAYER','IRN','COUNTRY',545,false),
+('IRN17','Sardar Azmoun','PLAYER','IRN','COUNTRY',546,false),
+('IRN18','Mehdi Taremi','PLAYER','IRN','COUNTRY',547,false),
+('IRN19','Alireza Jahanbakhsh','PLAYER','IRN','COUNTRY',548,false),
+('IRN20','Ali Gholizadeh','PLAYER','IRN','COUNTRY',549,false),
+('NZL1','Team Logo','PLAYER','NZL','COUNTRY',550,true),
+('NZL2','Max Crocombe Payne','PLAYER','NZL','COUNTRY',551,false),
+('NZL3','Alex Paulsen','PLAYER','NZL','COUNTRY',552,false),
+('NZL4','Michael Boxall','PLAYER','NZL','COUNTRY',553,false),
+('NZL5','Liberato Cacace','PLAYER','NZL','COUNTRY',554,false),
+('NZL6','Tim Payne','PLAYER','NZL','COUNTRY',555,false),
+('NZL7','Tyler Bindon','PLAYER','NZL','COUNTRY',556,false),
+('NZL8','Francis de Vries','PLAYER','NZL','COUNTRY',557,false),
+('NZL9','Finn Surman','PLAYER','NZL','COUNTRY',558,false),
+('NZL10','Joe Bell','PLAYER','NZL','COUNTRY',559,false),
+('NZL11','Sarpreet Singh','PLAYER','NZL','COUNTRY',560,false),
+('NZL12','Ryan Thomas','PLAYER','NZL','COUNTRY',561,false),
+('NZL13','Team Photo','PLAYER','NZL','COUNTRY',562,false),
+('NZL14','Matthew Garbett','PLAYER','NZL','COUNTRY',563,false),
+('NZL15','Marko Stamenić','PLAYER','NZL','COUNTRY',564,false),
+('NZL16','Ben Old','PLAYER','NZL','COUNTRY',565,false),
+('NZL17','Chris Wood','PLAYER','NZL','COUNTRY',566,false),
+('NZL18','Elijah Just','PLAYER','NZL','COUNTRY',567,false),
+('NZL19','Callum McCowatt','PLAYER','NZL','COUNTRY',568,false),
+('NZL20','Kosta Barbarouses','PLAYER','NZL','COUNTRY',569,false),
+('ESP1','Team Logo','PLAYER','ESP','COUNTRY',570,true),
+('ESP2','Unai Simon','PLAYER','ESP','COUNTRY',571,false),
+('ESP3','Robin Le Normand','PLAYER','ESP','COUNTRY',572,false),
+('ESP4','Aymeric Laporte','PLAYER','ESP','COUNTRY',573,false),
+('ESP5','Dean Huijsen','PLAYER','ESP','COUNTRY',574,false),
+('ESP6','Pedro Porro','PLAYER','ESP','COUNTRY',575,false),
+('ESP7','Dani Carvajal','PLAYER','ESP','COUNTRY',576,false),
+('ESP8','Marc Cucurella','PLAYER','ESP','COUNTRY',577,false),
+('ESP9','Martín Zubimendi','PLAYER','ESP','COUNTRY',578,false),
+('ESP10','Rodri','PLAYER','ESP','COUNTRY',579,false),
+('ESP11','Pedri','PLAYER','ESP','COUNTRY',580,false),
+('ESP12','Fabian Ruiz','PLAYER','ESP','COUNTRY',581,false),
+('ESP13','Team Photo','PLAYER','ESP','COUNTRY',582,false),
+('ESP14','Mikel Merino','PLAYER','ESP','COUNTRY',583,false),
+('ESP15','Lamine Yamal','PLAYER','ESP','COUNTRY',584,false),
+('ESP16','Dani Olmo','PLAYER','ESP','COUNTRY',585,false),
+('ESP17','Nico Williams','PLAYER','ESP','COUNTRY',586,false),
+('ESP18','Ferran Torres','PLAYER','ESP','COUNTRY',587,false),
+('ESP19','Álvaro Morata','PLAYER','ESP','COUNTRY',588,false),
+('ESP20','Mikel Oyarzabal','PLAYER','ESP','COUNTRY',589,false),
+('CPV1','Team Logo','PLAYER','CPV','COUNTRY',590,true),
+('CPV2','Vozinha','PLAYER','CPV','COUNTRY',591,false),
+('CPV3','Logan Costa','PLAYER','CPV','COUNTRY',592,false),
+('CPV4','Pico','PLAYER','CPV','COUNTRY',593,false),
+('CPV5','Diney','PLAYER','CPV','COUNTRY',594,false),
+('CPV6','Steven Moreira','PLAYER','CPV','COUNTRY',595,false),
+('CPV7','Wagner Pina','PLAYER','CPV','COUNTRY',596,false),
+('CPV8','Joao Paulo','PLAYER','CPV','COUNTRY',597,false),
+('CPV9','Yannick Semedo','PLAYER','CPV','COUNTRY',598,false),
+('CPV10','Kevin Pina','PLAYER','CPV','COUNTRY',599,false),
+('CPV11','Patrick Andrade','PLAYER','CPV','COUNTRY',600,false),
+('CPV12','Jamiro Monteiro','PLAYER','CPV','COUNTRY',601,false),
+('CPV13','Team Photo','PLAYER','CPV','COUNTRY',602,false),
+('CPV14','Deroy Duarte','PLAYER','CPV','COUNTRY',603,false),
+('CPV15','Garry Rodrigues','PLAYER','CPV','COUNTRY',604,false),
+('CPV16','Jovane Cabral','PLAYER','CPV','COUNTRY',605,false),
+('CPV17','Ryan Mendes','PLAYER','CPV','COUNTRY',606,false),
+('CPV18','Dailon Livramento','PLAYER','CPV','COUNTRY',607,false),
+('CPV19','Willy Semedo','PLAYER','CPV','COUNTRY',608,false),
+('CPV20','Bebe','PLAYER','CPV','COUNTRY',609,false),
+('KSA1','Team Logo','PLAYER','KSA','COUNTRY',610,true),
+('KSA2','Nawaf Alaqidi','PLAYER','KSA','COUNTRY',611,false),
+('KSA3','Abdulrahman Al-Sanbi','PLAYER','KSA','COUNTRY',612,false),
+('KSA4','Saud Abdulhamid','PLAYER','KSA','COUNTRY',613,false),
+('KSA5','Nawaf Bouwashl','PLAYER','KSA','COUNTRY',614,false),
+('KSA6','Jihad Thakri','PLAYER','KSA','COUNTRY',615,false),
+('KSA7','Moteb Al-Harbi','PLAYER','KSA','COUNTRY',616,false),
+('KSA8','Hassan Altambakti','PLAYER','KSA','COUNTRY',617,false),
+('KSA9','Musab Aljuwayr','PLAYER','KSA','COUNTRY',618,false),
+('KSA10','Ziyad Aljohani','PLAYER','KSA','COUNTRY',619,false),
+('KSA11','Abdullah Alkhaibari','PLAYER','KSA','COUNTRY',620,false),
+('KAS12','Nasser Aldawsari','PLAYER','KAS','COUNTRY',621,false),
+('KSA13','Team Photo','PLAYER','KSA','COUNTRY',622,false),
+('KSA14','Saleh Abu Alshamat','PLAYER','KSA','COUNTRY',623,false),
+('KSA15','Marwan Alsahafi','PLAYER','KSA','COUNTRY',624,false),
+('KSA16','Salem Aldawsari','PLAYER','KSA','COUNTRY',625,false),
+('KSA17','Abdulrahman Al-Aboud','PLAYER','KSA','COUNTRY',626,false),
+('KSA18','Feras Akbrikan','PLAYER','KSA','COUNTRY',627,false),
+('KSA19','Saleh Alshehri','PLAYER','KSA','COUNTRY',628,false),
+('KSA20','Abdullah Al-Hamdan','PLAYER','KSA','COUNTRY',629,false),
+('URU1','Team Logo','PLAYER','URU','COUNTRY',630,true),
+('URU2','Sergio Rochet','PLAYER','URU','COUNTRY',631,false),
+('URU3','Santiago Mele','PLAYER','URU','COUNTRY',632,false),
+('URU4','Ronald Araujo','PLAYER','URU','COUNTRY',633,false),
+('URU5','José María Giménez','PLAYER','URU','COUNTRY',634,false),
+('URU6','Sebastian Caceres','PLAYER','URU','COUNTRY',635,false),
+('URU7','Mathias Olivera','PLAYER','URU','COUNTRY',636,false),
+('URU8','Guillermo Varela','PLAYER','URU','COUNTRY',637,false),
+('URU9','Nahitan Nandez','PLAYER','URU','COUNTRY',638,false),
+('URU10','Federico Valverde','PLAYER','URU','COUNTRY',639,false),
+('URU11','Giorgian De Arrascaeta','PLAYER','URU','COUNTRY',640,false),
+('URU12','Rodrigo Bentancur','PLAYER','URU','COUNTRY',641,false),
+('URU13','Team Photo','PLAYER','URU','COUNTRY',642,false),
+('URU14','Manuel Ugarte','PLAYER','URU','COUNTRY',643,false),
+('URU15','Nicolás de la Cruz','PLAYER','URU','COUNTRY',644,false),
+('URU16','Maxi Araujo','PLAYER','URU','COUNTRY',645,false),
+('URU17','Darwin Núñez','PLAYER','URU','COUNTRY',646,false),
+('URU18','Federico Viñas','PLAYER','URU','COUNTRY',647,false),
+('URU19','Rodrigo Aguirre','PLAYER','URU','COUNTRY',648,false),
+('URU20','Facundo Pellistri','PLAYER','URU','COUNTRY',649,false),
+('FRA1','Team Logo','PLAYER','FRA','COUNTRY',650,true),
+('FRA2','Mike Maignan','PLAYER','FRA','COUNTRY',651,false),
+('FRA3','Theo Hernandez','PLAYER','FRA','COUNTRY',652,false),
+('FRA4','William Saliba','PLAYER','FRA','COUNTRY',653,false),
+('FRA5','Jules Kounde','PLAYER','FRA','COUNTRY',654,false),
+('FRA6','Ibrahima Konate','PLAYER','FRA','COUNTRY',655,false),
+('FRA7','Dayot Upamecano','PLAYER','FRA','COUNTRY',656,false),
+('FRA8','Lucas Digne','PLAYER','FRA','COUNTRY',657,false),
+('FRA9','Aurélien Tchouaméni','PLAYER','FRA','COUNTRY',658,false),
+('FRA10','Eduardo Camavinga','PLAYER','FRA','COUNTRY',659,false),
+('FRA11','Manu Kone','PLAYER','FRA','COUNTRY',660,false),
+('FRA12','Adrien Rabiot','PLAYER','FRA','COUNTRY',661,false),
+('FRA13','Team Photo','PLAYER','FRA','COUNTRY',662,false),
+('FRA14','Michael Olise','PLAYER','FRA','COUNTRY',663,false),
+('FRA15','Ousmane Dembele','PLAYER','FRA','COUNTRY',664,false),
+('FRA16','Bradley Barcola','PLAYER','FRA','COUNTRY',665,false),
+('FRA17','Désiré Doué','PLAYER','FRA','COUNTRY',666,false),
+('FRA18','Kingsley Coman','PLAYER','FRA','COUNTRY',667,false),
+('FRA19','Hugo Ekitike','PLAYER','FRA','COUNTRY',668,false),
+('FRA20','Kylian Mbappe','PLAYER','FRA','COUNTRY',669,false),
+('SEN1','Team Logo','PLAYER','SEN','COUNTRY',670,true),
+('SEN2','Edouard Mendy','PLAYER','SEN','COUNTRY',671,false),
+('SEN3','Yehvann Diouf','PLAYER','SEN','COUNTRY',672,false),
+('SEN4','Moussa Niakhaté','PLAYER','SEN','COUNTRY',673,false),
+('SEN5','Abdoulaye Seck','PLAYER','SEN','COUNTRY',674,false),
+('SEN6','Ismail Jakobs','PLAYER','SEN','COUNTRY',675,false),
+('SEN7','El Hadji Malick Diouf','PLAYER','SEN','COUNTRY',676,false),
+('SEN8','Kalidou Koulibaly','PLAYER','SEN','COUNTRY',677,false),
+('SEN9','Idrissa Gana Gueye','PLAYER','SEN','COUNTRY',678,false),
+('SEN10','Pape Matar Sarr','PLAYER','SEN','COUNTRY',679,false),
+('SEN11','Pape Gueye','PLAYER','SEN','COUNTRY',680,false),
+('SEN12','Habib Diarra','PLAYER','SEN','COUNTRY',681,false),
+('SEN13','Team Photo','PLAYER','SEN','COUNTRY',682,false),
+('SEN14','Lamine Camara','PLAYER','SEN','COUNTRY',683,false),
+('SEN15','Sadio Mane','PLAYER','SEN','COUNTRY',684,false),
+('SEN16','Ismaïla Sarr','PLAYER','SEN','COUNTRY',685,false),
+('SEN17','Boulaye Dia','PLAYER','SEN','COUNTRY',686,false),
+('SEN18','Iliman Ndiaye','PLAYER','SEN','COUNTRY',687,false),
+('SEN19','Nicolas Jackson','PLAYER','SEN','COUNTRY',688,false),
+('SEN20','Krepin Diatta','PLAYER','SEN','COUNTRY',689,false),
+('IRQ1','Team Logo','PLAYER','IRQ','COUNTRY',690,true),
+('IRQ2','Jalal Hassan','PLAYER','IRQ','COUNTRY',691,false),
+('IRQ3','Rebin Sulaka','PLAYER','IRQ','COUNTRY',692,false),
+('IRQ4','Hussein Ali','PLAYER','IRQ','COUNTRY',693,false),
+('IRQ5','Akam Hashem','PLAYER','IRQ','COUNTRY',694,false),
+('IRQ6','Merchas Doski','PLAYER','IRQ','COUNTRY',695,false),
+('IRQ7','Zaid Tahseen','PLAYER','IRQ','COUNTRY',696,false),
+('IRQ8','Manaf Younis','PLAYER','IRQ','COUNTRY',697,false),
+('IRQ9','Zidane Iqbal','PLAYER','IRQ','COUNTRY',698,false),
+('IRQ10','Amir Al-Ammari','PLAYER','IRQ','COUNTRY',699,false),
+('IRQ11','Ibrahim Bavesh','PLAYER','IRQ','COUNTRY',700,false),
+('IRQ12','Ali Jasim','PLAYER','IRQ','COUNTRY',701,false),
+('IRQ13','Team Photo','PLAYER','IRQ','COUNTRY',702,false),
+('IRQ14','Youssef Amyn','PLAYER','IRQ','COUNTRY',703,false),
+('IRQ15','Aimar Sher','PLAYER','IRQ','COUNTRY',704,false),
+('IRQ16','Marko Farji','PLAYER','IRQ','COUNTRY',705,false),
+('IRQ17','Osama Rashid','PLAYER','IRQ','COUNTRY',706,false),
+('IRQ18','Ali Al-Hamadi','PLAYER','IRQ','COUNTRY',707,false),
+('IRQ19','Aymen Hussein','PLAYER','IRQ','COUNTRY',708,false),
+('IRQ20','Mohanad Ali','PLAYER','IRQ','COUNTRY',709,false),
+('NOR1','Team Logo','PLAYER','NOR','COUNTRY',710,true),
+('NOR2','Orjan Nyland','PLAYER','NOR','COUNTRY',711,false),
+('NOR3','Julian Ryerson','PLAYER','NOR','COUNTRY',712,false),
+('NOR4','Leo Ostigård','PLAYER','NOR','COUNTRY',713,false),
+('NOR5','Kristoffer Vassbakk Ajer','PLAYER','NOR','COUNTRY',714,false),
+('NOR6','Marcus Holmgren Pedersen','PLAYER','NOR','COUNTRY',715,false),
+('NOR7','David Møller Wolfe','PLAYER','NOR','COUNTRY',716,false),
+('NOR8','Torbjørn Heggem','PLAYER','NOR','COUNTRY',717,false),
+('NOR9','Morten Thorsby','PLAYER','NOR','COUNTRY',718,false),
+('NOR10','Martin Ødegaard','PLAYER','NOR','COUNTRY',719,false),
+('NOR11','Sander Berge','PLAYER','NOR','COUNTRY',720,false),
+('NOR12','Andreas Schjelderup','PLAYER','NOR','COUNTRY',721,false),
+('NOR13','Team Photo','PLAYER','NOR','COUNTRY',722,false),
+('NOR14','Patrick Berg','PLAYER','NOR','COUNTRY',723,false),
+('NOR15','Erling Haaland','PLAYER','NOR','COUNTRY',724,false),
+('NOR16','Alexander Sørloth','PLAYER','NOR','COUNTRY',725,false),
+('NOR17','Aron Dønnum','PLAYER','NOR','COUNTRY',726,false),
+('NOR18','Jorgen Strand Larsen','PLAYER','NOR','COUNTRY',727,false),
+('NOR19','Antonio Nusa','PLAYER','NOR','COUNTRY',728,false),
+('NOR20','Oscar Bobb','PLAYER','NOR','COUNTRY',729,false),
+('ARG1','Team Logo','PLAYER','ARG','COUNTRY',730,true),
+('ARG2','Emiliano Martinez','PLAYER','ARG','COUNTRY',731,false),
+('ARG3','Nahuel Molina','PLAYER','ARG','COUNTRY',732,false),
+('ARG4','Cristian Romero','PLAYER','ARG','COUNTRY',733,false),
+('ARG5','Nicolas Otamendi','PLAYER','ARG','COUNTRY',734,false),
+('ARG6','Nicolas Tagliafico','PLAYER','ARG','COUNTRY',735,false),
+('ARG7','Leonardo Balerdi','PLAYER','ARG','COUNTRY',736,false),
+('ARG8','Enzo Fernandez','PLAYER','ARG','COUNTRY',737,false),
+('ARG9','Alexis Mac Allister','PLAYER','ARG','COUNTRY',738,false),
+('ARG10','Rodrigo De Paul','PLAYER','ARG','COUNTRY',739,false),
+('ARG11','Exequiel Palacios','PLAYER','ARG','COUNTRY',740,false),
+('ARG12','Leandro Paredes','PLAYER','ARG','COUNTRY',741,false),
+('ARG13','Team Photo','PLAYER','ARG','COUNTRY',742,false),
+('ARG14','Nico Paz','PLAYER','ARG','COUNTRY',743,false),
+('ARG15','Franco Mastantuono','PLAYER','ARG','COUNTRY',744,false),
+('ARG16','Nico Gonzalez','PLAYER','ARG','COUNTRY',745,false),
+('ARG17','Lionel Messi','PLAYER','ARG','COUNTRY',746,false),
+('ARG18','Lautaro Martinez','PLAYER','ARG','COUNTRY',747,false),
+('ARG19','Julian Alvarez','PLAYER','ARG','COUNTRY',748,false),
+('ARG20','Giuliano Simeone','PLAYER','ARG','COUNTRY',749,false),
+('ALG1','Team Logo','PLAYER','ALG','COUNTRY',750,true),
+('ALG2','Alexis Guendouz','PLAYER','ALG','COUNTRY',751,false),
+('ALG3','Ramy Bensebaini','PLAYER','ALG','COUNTRY',752,false),
+('ALG4','Youcef Atal','PLAYER','ALG','COUNTRY',753,false),
+('ALG5','Rayan Aït-Nouri','PLAYER','ALG','COUNTRY',754,false),
+('ALG6','Mohamed Amine Tougai','PLAYER','ALG','COUNTRY',755,false),
+('ALG7','Aïssa Mandi','PLAYER','ALG','COUNTRY',756,false),
+('ALG8','Ismael Bennacer','PLAYER','ALG','COUNTRY',757,false),
+('ALG9','Houssem Aquar','PLAYER','ALG','COUNTRY',758,false),
+('ALG10','Hicham Boudaoui','PLAYER','ALG','COUNTRY',759,false),
+('ALG11','Ramiz Zerrouki','PLAYER','ALG','COUNTRY',760,false),
+('ALG12','Nabil Bentalab','PLAYER','ALG','COUNTRY',761,false),
+('ALG13','Team Photo','PLAYER','ALG','COUNTRY',762,false),
+('ALG14','Farés Chaibi','PLAYER','ALG','COUNTRY',763,false),
+('ALG15','Riyad Mahrez','PLAYER','ALG','COUNTRY',764,false),
+('ALG16','Said Benrahma','PLAYER','ALG','COUNTRY',765,false),
+('ALG17','Anis Hadj Moussa','PLAYER','ALG','COUNTRY',766,false),
+('ALG18','Amine Gouiri','PLAYER','ALG','COUNTRY',767,false),
+('ALG19','Baghdad Bounedjah','PLAYER','ALG','COUNTRY',768,false),
+('ALG20','Mohammed Amoura','PLAYER','ALG','COUNTRY',769,false),
+('AUT1','Team Logo','PLAYER','AUT','COUNTRY',770,true),
+('AUT2','Alexander Schlager','PLAYER','AUT','COUNTRY',771,false),
+('AUT3','Patrick Pentz','PLAYER','AUT','COUNTRY',772,false),
+('AUT4','David Alaba','PLAYER','AUT','COUNTRY',773,false),
+('AUT5','Kevin Danso','PLAYER','AUT','COUNTRY',774,false),
+('AUT6','Philipp Lienhart','PLAYER','AUT','COUNTRY',775,false),
+('AUT7','Stefan Posch','PLAYER','AUT','COUNTRY',776,false),
+('AUT8','Phillipp Mwene','PLAYER','AUT','COUNTRY',777,false),
+('AUT9','Alexander Prass','PLAYER','AUT','COUNTRY',778,false),
+('AUT10','Xaver Schlager','PLAYER','AUT','COUNTRY',779,false),
+('AUT11','Marcel Sabitzer','PLAYER','AUT','COUNTRY',780,false),
+('AUT12','Konrad Laimer','PLAYER','AUT','COUNTRY',781,false),
+('AUT13','Team Photo','PLAYER','AUT','COUNTRY',782,false),
+('AUT14','Florian Grillitsch','PLAYER','AUT','COUNTRY',783,false),
+('AUT15','Nicolas Seiwald','PLAYER','AUT','COUNTRY',784,false),
+('AUT16','Romano Schmid','PLAYER','AUT','COUNTRY',785,false),
+('AUT17','Patrick Wimmer','PLAYER','AUT','COUNTRY',786,false),
+('AUT18','Christoph Baumgartner','PLAYER','AUT','COUNTRY',787,false),
+('AUT19','Michael Gregoritsch','PLAYER','AUT','COUNTRY',788,false),
+('AUT20','Marko Arnautović','PLAYER','AUT','COUNTRY',789,false),
+('JOR1','Team Logo','PLAYER','JOR','COUNTRY',790,true),
+('JOR2','Yazeed Abulaila','PLAYER','JOR','COUNTRY',791,false),
+('JOR3','Ihsan Haddad','PLAYER','JOR','COUNTRY',792,false),
+('JOR4','Mohammad Abu Hashish','PLAYER','JOR','COUNTRY',793,false),
+('JOR5','Yazan Al-Arab','PLAYER','JOR','COUNTRY',794,false),
+('JOR6','Abdallah Nasib','PLAYER','JOR','COUNTRY',795,false),
+('JOR7','Saleem Obaid','PLAYER','JOR','COUNTRY',796,false),
+('JOR8','Mohammad Abualnadi','PLAYER','JOR','COUNTRY',797,false),
+('JOR9','Ibrahim Saadeh','PLAYER','JOR','COUNTRY',798,false),
+('JOR10','Nizar Al-Rashdan','PLAYER','JOR','COUNTRY',799,false),
+('JOR11','Noor Al-Rawabdeh','PLAYER','JOR','COUNTRY',800,false),
+('JOR12','Mohannad Abu Taha','PLAYER','JOR','COUNTRY',801,false),
+('JOR13','Team Photo','PLAYER','JOR','COUNTRY',802,false),
+('JOR14','Amer Jamous','PLAYER','JOR','COUNTRY',803,false),
+('JOR15','Musa Al-Taamari','PLAYER','JOR','COUNTRY',804,false),
+('JOR16','Yazan Al-Naimat','PLAYER','JOR','COUNTRY',805,false),
+('JOR17','Mahmoud Al-Mardi','PLAYER','JOR','COUNTRY',806,false),
+('JOR18','Ali Olwan','PLAYER','JOR','COUNTRY',807,false),
+('JOR19','Mohammad Abu Zrayq','PLAYER','JOR','COUNTRY',808,false),
+('JOR20','Ibrahim Sabra','PLAYER','JOR','COUNTRY',809,false),
+('POR1','Team Logo','PLAYER','POR','COUNTRY',810,true),
+('POR2','Diogo Costa','PLAYER','POR','COUNTRY',811,false),
+('POR3','Jose Sa','PLAYER','POR','COUNTRY',812,false),
+('POR4','Ruben Dias','PLAYER','POR','COUNTRY',813,false),
+('POR5','João Cancelo','PLAYER','POR','COUNTRY',814,false),
+('POR6','Diogo Dalot','PLAYER','POR','COUNTRY',815,false),
+('POR7','Nuno Mendes','PLAYER','POR','COUNTRY',816,false),
+('POR8','Gonçalo Inácio','PLAYER','POR','COUNTRY',817,false),
+('POR9','Bernardo Silva','PLAYER','POR','COUNTRY',818,false),
+('POR10','Bruno Fernandes','PLAYER','POR','COUNTRY',819,false),
+('POR11','Ruben Neves','PLAYER','POR','COUNTRY',820,false),
+('POR12','Vitinha','PLAYER','POR','COUNTRY',821,false),
+('POR13','Team Photo','PLAYER','POR','COUNTRY',822,false),
+('POR14','João Neves','PLAYER','POR','COUNTRY',823,false),
+('POR15','Cristiano Ronaldo','PLAYER','POR','COUNTRY',824,false),
+('POR16','Francisco Trincao','PLAYER','POR','COUNTRY',825,false),
+('POR17','João Felix','PLAYER','POR','COUNTRY',826,false),
+('POR18','Gonçalo Ramos','PLAYER','POR','COUNTRY',827,false),
+('POR19','Pedro Neto','PLAYER','POR','COUNTRY',828,false),
+('POR20','Rafael Leão','PLAYER','POR','COUNTRY',829,false),
+('COD1','Team Logo','PLAYER','COD','COUNTRY',830,true),
+('COD2','Lionel Mpasi','PLAYER','COD','COUNTRY',831,false),
+('COD3','Aaron Wan-Bissaka','PLAYER','COD','COUNTRY',832,false),
+('COD4','Axel Tuanzebe','PLAYER','COD','COUNTRY',833,false),
+('COD5','Arthur Masuaku','PLAYER','COD','COUNTRY',834,false),
+('COD6','Chancel Mbemba','PLAYER','COD','COUNTRY',835,false),
+('COD7','Joris Kayembe','PLAYER','COD','COUNTRY',836,false),
+('COD8','Charles Pickel','PLAYER','COD','COUNTRY',837,false),
+('COD9','Ngal''ayel Mukau','PLAYER','COD','COUNTRY',838,false),
+('COD10','Edo Kayembe','PLAYER','COD','COUNTRY',839,false),
+('COD11','Samuel Moutoussamy','PLAYER','COD','COUNTRY',840,false),
+('COD12','Noah Sadiki','PLAYER','COD','COUNTRY',841,false),
+('COD13','Team Photo','PLAYER','COD','COUNTRY',842,false),
+('COD14','Théo Bongonda','PLAYER','COD','COUNTRY',843,false),
+('COD15','Meschak Elia','PLAYER','COD','COUNTRY',844,false),
+('COD16','Yoane Wissa','PLAYER','COD','COUNTRY',845,false),
+('COD17','Brian Cipenga','PLAYER','COD','COUNTRY',846,false),
+('COD18','Fiston Mayele','PLAYER','COD','COUNTRY',847,false),
+('COD19','Cédric Bakambu','PLAYER','COD','COUNTRY',848,false),
+('COD20','Nathanaël Mbuku','PLAYER','COD','COUNTRY',849,false),
+('UZB1','Team Logo','PLAYER','UZB','COUNTRY',850,true),
+('UZB2','Utkir Yusupov','PLAYER','UZB','COUNTRY',851,false),
+('UZB3','Farrukh Savfiev','PLAYER','UZB','COUNTRY',852,false),
+('UZB4','Sherzod Nasrullaev','PLAYER','UZB','COUNTRY',853,false),
+('UZB5','Umar Eshmurodov','PLAYER','UZB','COUNTRY',854,false),
+('UZB6','Husniddin Aliqulov','PLAYER','UZB','COUNTRY',855,false),
+('UZB7','Rustamjon Ashurmatov','PLAYER','UZB','COUNTRY',856,false),
+('UZB8','Khojiakbar Alijonov','PLAYER','UZB','COUNTRY',857,false),
+('UZB9','Abdukodir Khusanov','PLAYER','UZB','COUNTRY',858,false),
+('UZB10','Odiljon Hamrobekov','PLAYER','UZB','COUNTRY',859,false),
+('UZB11','Otabek Shukurov','PLAYER','UZB','COUNTRY',860,false),
+('UZB12','Jamshid Iskanderov','PLAYER','UZB','COUNTRY',861,false),
+('UZB13','Team Photo','PLAYER','UZB','COUNTRY',862,false),
+('UZB14','Azizbek Turgunboev','PLAYER','UZB','COUNTRY',863,false),
+('UZB15','Khojimat Erkinov','PLAYER','UZB','COUNTRY',864,false),
+('UZB16','Eldor Shomurodov','PLAYER','UZB','COUNTRY',865,false),
+('UZB17','Oston Urunov','PLAYER','UZB','COUNTRY',866,false),
+('UZB18','Jaloliddin Masharipov','PLAYER','UZB','COUNTRY',867,false),
+('UZB19','Igor Sergeev','PLAYER','UZB','COUNTRY',868,false),
+('UZB20','Abbosbek Fayzullaev','PLAYER','UZB','COUNTRY',869,false),
+('COL1','Team Logo','PLAYER','COL','COUNTRY',870,true),
+('COL2','Camilo Vargas','PLAYER','COL','COUNTRY',871,false),
+('COL3','David Ospina','PLAYER','COL','COUNTRY',872,false),
+('COL4','Dávinson Sánchez','PLAYER','COL','COUNTRY',873,false),
+('COL5','Yerry Mina','PLAYER','COL','COUNTRY',874,false),
+('COL6','Daniel Munoz','PLAYER','COL','COUNTRY',875,false),
+('COL7','Johan Mojica','PLAYER','COL','COUNTRY',876,false),
+('COL8','Jhon Lucumí','PLAYER','COL','COUNTRY',877,false),
+('COL9','Santiago Arias','PLAYER','COL','COUNTRY',878,false),
+('COL10','Jefferson Lerma','PLAYER','COL','COUNTRY',879,false),
+('COL11','Kevin Castaño','PLAYER','COL','COUNTRY',880,false),
+('COL12','Richard Rios','PLAYER','COL','COUNTRY',881,false),
+('COL13','Team Photo','PLAYER','COL','COUNTRY',882,false),
+('COL14','James Rodriguez','PLAYER','COL','COUNTRY',883,false),
+('COL15','Juan Fernando Quintero','PLAYER','COL','COUNTRY',884,false),
+('COL16','Jorge Carrascal','PLAYER','COL','COUNTRY',885,false),
+('COL17','Jon Arias','PLAYER','COL','COUNTRY',886,false),
+('COL18','Jhon Cordova','PLAYER','COL','COUNTRY',887,false),
+('COL19','Luis Suarez','PLAYER','COL','COUNTRY',888,false),
+('COL20','Luis Diaz','PLAYER','COL','COUNTRY',889,false),
+('ENG1','Team Logo','PLAYER','ENG','COUNTRY',890,true),
+('ENG2','Jordan Pickford','PLAYER','ENG','COUNTRY',891,false),
+('ENG3','John Stones','PLAYER','ENG','COUNTRY',892,false),
+('ENG4','Marc Guéhi','PLAYER','ENG','COUNTRY',893,false),
+('ENG5','Ezri Konsa','PLAYER','ENG','COUNTRY',894,false),
+('ENG6','Trent Alexander-Arnold','PLAYER','ENG','COUNTRY',895,false),
+('ENG7','Reece James','PLAYER','ENG','COUNTRY',896,false),
+('ENG8','Dan Burn','PLAYER','ENG','COUNTRY',897,false),
+('ENG9','Jordan Henderson','PLAYER','ENG','COUNTRY',898,false),
+('ENG10','Declan Rice','PLAYER','ENG','COUNTRY',899,false),
+('ENG11','Jude Bellingham','PLAYER','ENG','COUNTRY',900,false),
+('ENG12','Cole Palmer','PLAYER','ENG','COUNTRY',901,false),
+('ENG13','Team Photo','PLAYER','ENG','COUNTRY',902,false),
+('ENG14','Morgan Rogers','PLAYER','ENG','COUNTRY',903,false),
+('ENG15','Anthony Gordon','PLAYER','ENG','COUNTRY',904,false),
+('ENG16','Phil Foden','PLAYER','ENG','COUNTRY',905,false),
+('ENG17','Bukayo Saka','PLAYER','ENG','COUNTRY',906,false),
+('ENG18','Harry Kane','PLAYER','ENG','COUNTRY',907,false),
+('ENG19','Marcus Rashford','PLAYER','ENG','COUNTRY',908,false),
+('ENG20','Ollie Watkins','PLAYER','ENG','COUNTRY',909,false),
+('CRO1','Team Logo','PLAYER','CRO','COUNTRY',910,true),
+('CRO2','Dominik Livaković','PLAYER','CRO','COUNTRY',911,false),
+('CRO3','Duje Caleta-Car','PLAYER','CRO','COUNTRY',912,false),
+('CRO4','Josko Gvardiol','PLAYER','CRO','COUNTRY',913,false),
+('CRO5','Josip Stanišić','PLAYER','CRO','COUNTRY',914,false),
+('CRO6','Luka Vušković','PLAYER','CRO','COUNTRY',915,false),
+('CRO7','Josip Sutalo','PLAYER','CRO','COUNTRY',916,false),
+('CRO8','Kristijan Jakic','PLAYER','CRO','COUNTRY',917,false),
+('CRO9','Luka Modrić','PLAYER','CRO','COUNTRY',918,false),
+('CRO10','Mateo Kovacic','PLAYER','CRO','COUNTRY',919,false),
+('CRO11','Martin Baturina','PLAYER','CRO','COUNTRY',920,false),
+('CRO12','Lovro Majer','PLAYER','CRO','COUNTRY',921,false),
+('CRO13','Team Photo','PLAYER','CRO','COUNTRY',922,false),
+('CRO14','Mario Pasalic','PLAYER','CRO','COUNTRY',923,false),
+('CRO15','Petar Sucic','PLAYER','CRO','COUNTRY',924,false),
+('CRO16','Ivan Perišić','PLAYER','CRO','COUNTRY',925,false),
+('CRO17','Marco Pasalic','PLAYER','CRO','COUNTRY',926,false),
+('CRO18','Ante Budimir','PLAYER','CRO','COUNTRY',927,false),
+('CRO19','Andrej Kramarić','PLAYER','CRO','COUNTRY',928,false),
+('CRO20','Franjo Ivanovic','PLAYER','CRO','COUNTRY',929,false),
+('GHA1','Team Logo','PLAYER','GHA','COUNTRY',930,true),
+('GHA2','Lawrence Ati Zigi','PLAYER','GHA','COUNTRY',931,false),
+('GHA3','Tariq Lamptey','PLAYER','GHA','COUNTRY',932,false),
+('GHA4','Mohammed Salisu','PLAYER','GHA','COUNTRY',933,false),
+('GHA5','Alidu Seidu','PLAYER','GHA','COUNTRY',934,false),
+('GHA6','Alexander Djiku','PLAYER','GHA','COUNTRY',935,false),
+('GHA7','Gideon Mensah','PLAYER','GHA','COUNTRY',936,false),
+('GHA8','Caleb Yirenkyi','PLAYER','GHA','COUNTRY',937,false),
+('GHA9','Abdul Issahaku Fatawu','PLAYER','GHA','COUNTRY',938,false),
+('GHA10','Thomas Partey','PLAYER','GHA','COUNTRY',939,false),
+('GHA11','Salis Abdul Samed','PLAYER','GHA','COUNTRY',940,false),
+('GHA12','Kamaldeen Sulemana','PLAYER','GHA','COUNTRY',941,false),
+('GHA13','Team Photo','PLAYER','GHA','COUNTRY',942,false),
+('GHA14','Mohammed Kudus','PLAYER','GHA','COUNTRY',943,false),
+('GHA15','Inaki Williams','PLAYER','GHA','COUNTRY',944,false),
+('GHA16','Jordan Ayew','PLAYER','GHA','COUNTRY',945,false),
+('GHA17','Andrew Ayew','PLAYER','GHA','COUNTRY',946,false),
+('GHA18','Joseph Paintsil','PLAYER','GHA','COUNTRY',947,false),
+('GHA19','Osman Bukari','PLAYER','GHA','COUNTRY',948,false),
+('GHA20','Antoine Semenyo','PLAYER','GHA','COUNTRY',949,false),
+('PAN1','Team Logo','PLAYER','PAN','COUNTRY',950,true),
+('PAN2','Orlando Mosquera','PLAYER','PAN','COUNTRY',951,false),
+('PAN3','Luis Mejia','PLAYER','PAN','COUNTRY',952,false),
+('PAN4','Fidel Escobar','PLAYER','PAN','COUNTRY',953,false),
+('PAN5','Andres Andrade','PLAYER','PAN','COUNTRY',954,false),
+('PAN6','Michael Amir Murillo','PLAYER','PAN','COUNTRY',955,false),
+('PAN7','Eric Davis','PLAYER','PAN','COUNTRY',956,false),
+('PAN8','Jose Cordoba','PLAYER','PAN','COUNTRY',957,false),
+('PAN9','Cesar Blackman','PLAYER','PAN','COUNTRY',958,false),
+('PAN10','Cristian Martinez','PLAYER','PAN','COUNTRY',959,false),
+('PAN11','Aníbal Godoy','PLAYER','PAN','COUNTRY',960,false),
+('PAN12','Adalberto Carrasquilla','PLAYER','PAN','COUNTRY',961,false),
+('PAN13','Team Photo','PLAYER','PAN','COUNTRY',962,false),
+('PAN14','Édgar Bárcenas','PLAYER','PAN','COUNTRY',963,false),
+('PAN15','Carlos Harvey','PLAYER','PAN','COUNTRY',964,false),
+('PAN16','Ismael Díaz','PLAYER','PAN','COUNTRY',965,false),
+('PAN17','Jose Fajardo','PLAYER','PAN','COUNTRY',966,false),
+('PAN18','Cecilio Waterman','PLAYER','PAN','COUNTRY',967,false),
+('PAN19','Jose Luiz Rodriguez','PLAYER','PAN','COUNTRY',968,false),
+('PAN20','Alberto Quintero','PLAYER','PAN','COUNTRY',969,false),
+('FWC9','Italy 1934','HISTORY','WW','FWC',970,true),
+('FWC10','Uruguay 1950','HISTORY','WW','FWC',971,true),
+('FWC11','West Germany 1954','HISTORY','WW','FWC',972,true),
+('FWC12','Brazil 1962','HISTORY','WW','FWC',973,true),
+('FWC13','West Germany 1974','HISTORY','WW','FWC',974,true),
+('FWC14','Argentina 1986','HISTORY','WW','FWC',975,true),
+('FWC15','Brazil 1994','HISTORY','WW','FWC',976,true),
+('FWC16','Brazil 2002','HISTORY','WW','FWC',977,true),
+('FWC17','Italy 2006','HISTORY','WW','FWC',978,true),
+('FWC18','Germany 2014','HISTORY','WW','FWC',979,true),
+('FWC19','Argentina 2022','HISTORY','WW','FWC',980,true);
