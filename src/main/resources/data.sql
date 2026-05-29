@@ -980,4 +980,17 @@ INSERT INTO stickers (code,name,type,country_code,category_code,page_number,spec
 ('FWC16','Brazil 2002','HISTORY','WW','FWC',977,true),
 ('FWC17','Italy 2006','HISTORY','WW','FWC',978,true),
 ('FWC18','Germany 2014','HISTORY','WW','FWC',979,true),
-('FWC19','Argentina 2022','HISTORY','WW','FWC',980,true);
+('FWC19','Argentina 2022','HISTORY','WW','FWC',980,true),
+('COCA1','Lamine Yamal','PLAYER','WW','COCA',981,false),
+('COCA2','Joshua Kimmich','PLAYER','WW','COCA',982,false),
+('COCA3','Eduardo Camavinga','PLAYER','WW','COCA',983,false),
+('COCA4','Josko Gvardiol','PLAYER','WW','COCA',984,false),
+('COCA5','Federico Valverde','PLAYER','WW','COCA',985,false),
+('COCA6','Virgil van Dijk','PLAYER','WW','COCA',986,false),
+('COCA7','Alphonso Davies','PLAYER','WW','COCA',987,false),
+('COCA8','Raul Jimenez','PLAYER','WW','COCA',988,false),
+('COCA9','William Saliba','PLAYER','WW','COCA',989,false),
+('COCA10','Lautaro Martinez','PLAYER','WW','COCA',990,false),
+('COCA11','Harry Kane','PLAYER','WW','COCA',991,false),
+('COCA12','Antonee Robinson','PLAYER','WW','COCA',992,false);
+
