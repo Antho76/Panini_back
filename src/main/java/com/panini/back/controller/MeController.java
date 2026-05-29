@@ -10,6 +10,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @Validated
 @RestController
@@ -34,5 +35,10 @@ public class MeController {
     @PostMapping("/collection")
     public CollectionItem upsert(Authentication a, @Valid @RequestBody UpsertItemRequest req){
         return service.upsert(a.getName(), req);
+    }
+
+    @GetMapping("/collection/stats/by-country")
+    public Map<String, Map<String, Object>> statsByCountry(Authentication a){
+        return service.statsByCountry(a.getName());
     }
 }

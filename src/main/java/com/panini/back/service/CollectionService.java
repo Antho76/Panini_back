@@ -88,4 +88,41 @@ public class CollectionService {
         item.setMissing(request.getQuantityOwned() == null || request.getQuantityOwned() == 0);
         return userCollectionItems.save(item);
     }
+
+    public Map<String, Map<String, Object>> statsByCountry(String username) {
+        List<CollectionItem> collection = items.findByUser_Username(username);
+        Set<String> countryCodeSet = new HashSet<>();
+        
+        // Get all stickers to determine countries
+        List<Sticker> allStickers = stickers.findAll();
+        for (Sticker s : allStickers) {
+            if (s.getCountryCode() != null && !s.getCountryCode().isEmpty()) {
+                countryCodeSet.add(s.getCountryCode());
+            }
+        }
+        
+        Map<String, Map<String, Object>> result = new HashMap<>();
+        
+        for (String countryCode : countryCodeSet) {
+            List<Sticker> countryStickerList = allStickers.stream()
+                    .filter(s -> countryCode.equals(s.getCountryCode()))
+                    .toList();
+            
+            long total = countryStickerList.size();
+            long owned = collection.stream()
+                    .filter(ci -> ci.getSticker().getCountryCode().equals(countryCode) && ci.getQuantityOwned() != null && ci.getQuantityOwned() > 0)
+                    .count();
+            
+            double percentage = total == 0 ? 0 : Math.round((owned * 10000.0 / total)) / 100.0;
+            
+            Map<String, Object> countryStats = new HashMap<>();
+            countryStats.put("total", total);
+            countryStats.put("owned", owned);
+            countryStats.put("percentage", percentage);
+            
+            result.put(countryCode, countryStats);
+        }
+        
+        return result;
+    }
 }
