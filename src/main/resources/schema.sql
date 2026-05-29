@@ -1,0 +1,2 @@
+-- Spring Boot gère déjà le schéma via hibernate.ddl-auto=update
+-- Ce fichier est optionnel
